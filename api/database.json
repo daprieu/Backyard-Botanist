@@ -16,12 +16,25 @@
         "id": 1,
         "commonName": "Scarlet Oak",
         "scientificName": "Quercus coccinea",
+        "userId": 1
+    },
+    {
+        "id": 2,
+        "commonName": "Sweetgum",
+        "scientificName": "Quercus coccinea",
         "userId": 2
+    },
+    {
+        "id": 3,
+        "commonName": "violet",
+        "scientificName": "Quercus coccinea",
+        "userId": 1
     }
 ],
 "plantNotes":[
     {
         "id": 1,
+        "plantId" : 1,
         "commonName": "Scarlet Oak",
         "scientificName": "Quercus coccinea",
         "type": "tree",

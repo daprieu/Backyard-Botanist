@@ -12,7 +12,7 @@ export const PlantProvider = (props) => {
     //of the component, and a function that updates it.
 
     const getPlants = () => {
-        return fetch(`http://localhost:8088/plants?userId=${(parseInt(sessionStorage.getItem("nutshell_user")))}&completed=false`)
+        return fetch(`http://localhost:8088/plants?userId=${(parseInt(sessionStorage.getItem("app_user_id")))}`)
         .then(res => res.json())
         .then(setPlants)
     }
