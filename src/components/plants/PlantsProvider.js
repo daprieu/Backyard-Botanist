@@ -6,6 +6,8 @@ export const PlantContext = createContext()
 
 export const PlantProvider = (props) => {
     const [plants, setPlants] = useState([])
+    console.log('plants: ', plants);
+    
     //useState() hook to define a variable that holds the state 
     //of the component, and a function that updates it.
 
