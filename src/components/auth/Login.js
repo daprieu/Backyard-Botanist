@@ -30,7 +30,8 @@ export const Login = () => {
             .then(exists => {
                 if (exists) {
                     sessionStorage.setItem(userStorageKey, exists.id)
-                    history.push("/")
+                    sessionStorage.setItem("BB_userName", exists.name)
+                    history.push("/myplants")
                 } else {
                     setExistDialog(true)
                 }
