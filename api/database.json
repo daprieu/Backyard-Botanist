@@ -1,0 +1,46 @@
+{
+"users": [
+    {
+        "id": 1,
+        "name": "Alex Prieu",
+        "email": "aprieu@bb.com"
+    },
+    {
+        "id": 2,
+        "name": "Professor Oak",
+        "email": "Oak@bb.com"
+    }
+],
+"plants": [
+    {
+        "id": 1,
+        "commonName": "Scarlet Oak",
+        "scientificName": "Quercus coccinea",
+        "userId": 2
+    }
+],
+"plantNotes":[
+    {
+        "id": 1,
+        "commonName": "Scarlet Oak",
+        "scientificName": "Quercus coccinea",
+        "type": "tree",
+        "fruit": "acorn",
+        "flowerColor": "N/A",
+        "Location": "Shelby Park near the dog park",
+        "date" : 1615839756
+    }
+],
+"friends": [
+    {
+        "id": 1,
+        "currentUserId": 2,
+        "friendId": 1
+    },
+    {
+        "id": 2,
+        "currentUserId": 1,
+        "friendId": 2
+    }
+]
+}
