@@ -5,6 +5,8 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { userStorageKey } from "./auth/authSettings"
 import { UserProvider } from "./users/UserProvider"
+import { NavBar } from "./users/UserList"
+
 
 export const BackyardBotanist = () => (
     <>
@@ -12,6 +14,7 @@ export const BackyardBotanist = () => (
       if (sessionStorage.getItem(userStorageKey)) {
         return (
           <>
+          <NavBar />
           <UserProvider>
           </UserProvider>
             //Components that are rendered when the user is authenticated go inside this React fragment
