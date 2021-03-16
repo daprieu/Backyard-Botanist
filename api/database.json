@@ -16,6 +16,7 @@
         "id": 1,
         "commonName": "Scarlet Oak",
         "scientificName": "Quercus coccinea",
+        "plantnotesId": 1,
         "userId": 1
     },
     {
@@ -31,17 +32,14 @@
         "userId": 1
     }
 ],
-"plantNotes":[
+"plantnotes":[
     {
         "id": 1,
-        "plantId" : 1,
-        "commonName": "Scarlet Oak",
-        "scientificName": "Quercus coccinea",
         "type": "tree",
         "fruit": "acorn",
         "flowerColor": "N/A",
-        "Location": "Shelby Park near the dog park",
-        "date" : 1615839756
+        "location": "Shelby Park near the dog park",
+        "date" : 1615914780
     }
 ],
 "friends": [
