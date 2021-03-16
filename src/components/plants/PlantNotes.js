@@ -6,10 +6,11 @@ export const PlantNote = () => {
 
     const {getPlantById} = useContext(PlantContext)
     const [plants, setPlants] = useState({})
-    console.log('plants: ', plants);
+    // console.log('plants: ', plants);
 
     const {plantId} = useParams()
-    console.log('plantId: ', plantId);
+    // console.log('plantId: ', plantId);
+    // useParams from react-router-dom allows the app to read a parameter from the URL.
     
     useEffect(() => {
         getPlantById(plantId)

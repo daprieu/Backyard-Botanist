@@ -6,10 +6,10 @@ import { PlantContext } from "./PlantsProvider"
 export const PlantList = () => {
 
     const currentUser = sessionStorage.getItem("BB_userName")
-    console.log('currentUser: ', currentUser);
+    // console.log('currentUser: ', currentUser);
 
     const { plants, getPlants } = useContext(PlantContext)
-    console.log('userPlants: ', plants);
+    // console.log('userPlants: ', plants);
     //import the context object created in the provider component so that 
     // the Context hook can access the objects it exposes.
     // This state changes when `getFriends()` is invoked below
