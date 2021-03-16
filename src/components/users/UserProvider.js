@@ -7,7 +7,7 @@ export const UserContext = createContext()
 export const UserProvider = (props) => {
 const [users, setUsers] = useState([])
 
-console.log('users: ', users);
+// console.log('users: ', users);
 // useState to set the initial state of users to and empty array and setUsers to
 //update the state with an array of objects (users)
 
