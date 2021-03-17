@@ -4,13 +4,15 @@ import { trefleAPI } from "../../Settings"
 export const SearchPlantsContext = createContext()
 
 export const SearchPlantsProvider = (props) => {
-    const [searchablePlants, setSearchablePlants] = useState("")
+    const [searchablePlants, setSearchablePlants] = useState([])
     const [ searchTerms, setSearchTerms ] = useState("")
 
-    const getSearchablePlants = () => {
-        return fetch(`${trefleAPI.baseURL}${trefleAPI.apiKey}`)
+    const getSearchablePlants = (plantName) => {
+        
+        return fetch(`${trefleAPI.baseURL}${trefleAPI.apiKey}&q=${plantName}`)
         .then(res => res.json())
-        .then(setSearchablePlants)
+        .then(data => setSearchablePlants(data.data))
+        
     }
 
     return (

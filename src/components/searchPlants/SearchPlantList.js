@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
-import { SearchPlantsContext, SearchPlantsProvider } from "./SearchPlantsProvider"
+import { SearchPlantCard } from "./SearchPlantCard"
+import { SearchPlantsContext } from "./SearchPlantsProvider"
 
 export const SearchablePlantList = () => {
 
@@ -14,7 +15,8 @@ export const SearchablePlantList = () => {
 
     useEffect(() => {
         if (searchTerms !== "") {
-            const query = searchablePlants.filter(plant => plant.name.toLowerCase().includes(searchTerms))
+            const query = searchablePlants.filter(plant => plant.scientific_name.includes(searchTerms))
+            console.log('query: ', query);
             setFiltered(query)
         } else {
             setFiltered(searchablePlants)
@@ -25,9 +27,7 @@ export const SearchablePlantList = () => {
         <>
         <div className="searchedPlants">
             {
-                filteredPlants.map(plant => {
-                    
-                })
+                filteredPlants.map(plant => <SearchPlantCard key={plant.id} plant={plant} />)
             }
         </div>
         </>
