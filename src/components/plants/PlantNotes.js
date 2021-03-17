@@ -4,7 +4,7 @@ import { PlantContext } from "./PlantsProvider"
 
 export const PlantNote = () => {
 
-    const {getPlantById} = useContext(PlantContext)
+    const {getPlantsById} = useContext(PlantContext)
     const [plants, setPlants] = useState({})
     // console.log('plants: ', plants);
 
@@ -13,7 +13,7 @@ export const PlantNote = () => {
     // useParams from react-router-dom allows the app to read a parameter from the URL.
     
     useEffect(() => {
-        getPlantById(plantId)
+        getPlantsById(plantId)
         .then((res) => {
             
             setPlants(res)
@@ -29,6 +29,7 @@ export const PlantNote = () => {
 
     return (
         <section className="plant">
+            
             <h3 className="plant__name">Name: {plants.commonName}</h3>
             <div className="plant__sName">Scientfic name: {plants.scientificName}</div>
             <div className="plant__type">Type: {plants.plantnotes?.type}</div>

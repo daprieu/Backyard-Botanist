@@ -37,7 +37,7 @@ export const SearchablePlantList = () => {
             setFiltered([])
         }
     }, [searchTerms, searchablePlants])
-  
+
     return (
         <>
         <div className="searchedPlants">
