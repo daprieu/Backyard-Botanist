@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { SearchPlantsContext } from "./SearchPlantsProvider"
 
-export const PlantSearch = (props) => {
+export const PlantSearch = () => {
     const { setSearchTerms } = useContext(SearchPlantsContext)
     
 

@@ -5,19 +5,27 @@ import { SearchPlantsContext } from "./SearchPlantsProvider"
 export const SearchablePlantList = () => {
 
     const {searchablePlants, getSearchablePlants, searchTerms} = useContext(SearchPlantsContext)
+    console.log('searchTerms: ', searchTerms);
 
     const [filteredPlants, setFiltered] = useState([])
     console.log('filteredPlants: ', filteredPlants);
     
     useEffect(() => {
-        getSearchablePlants()
-    }, [])
+        
+        if (searchTerms !== "") {
+        getSearchablePlants(searchTerms)
+        .then(a => console.log('a: ', a))
+        
+        
+    }
+    
+    }, [searchTerms])
 
     useEffect(() => {
         if (searchTerms !== "") {
-            const query = searchablePlants.filter(plant => plant.scientific_name.includes(searchTerms))
-            console.log('query: ', query);
-            setFiltered(query)
+            const results = searchablePlants
+            
+            setFiltered(results)
         } else {
             setFiltered(searchablePlants)
         }
