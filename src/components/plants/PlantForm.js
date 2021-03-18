@@ -5,8 +5,8 @@ import { PlantContext, PlantProvider } from "./PlantsProvider";
 
 
 export const PlantForm = () => {
-    const { addAPlant } = useContext(PlantContext)
-    const {treflePlant, getSPlantsById, setTreflePlant} = useContext(SearchPlantsContext)
+    const { addAPlant, addPlantNote, getPlants } = useContext(PlantContext)
+    const {treflePlant, getSPlantsById } = useContext(SearchPlantsContext)
     // const [ ] = useState({})
     console.log('treflePlant: ', treflePlant);
 
@@ -15,14 +15,35 @@ export const PlantForm = () => {
         image: "",
         commonName: "",
         scientificName: "",
+        type: "",
+        fruit: "",
+        flowerColor: "",
+        location: "",
+        date: ""
     })
+    console.log('plant: ', plant);
+    
     const { trefleId } = useParams()
     console.log('trefleId: ', trefleId);
     const history = useHistory()
 
     useEffect(() => {
         getSPlantsById(trefleId)
+        
     }, [])
+    const handleControlledInputChange = (event) => {
+        /* When changing a state object or array,
+        always create a copy, make changes, and then set state.*/
+       const newPlant = { ...plant }
+       let selectedVal = event.target.value
+       
+       /* location is an object with properties.
+       Set the property to the new value
+       using object bracket notation. */
+       newPlant[event.target.id] = selectedVal
+       // update state
+       setPlant(newPlant)
+     }
 
     const handleSavePlant = () => {
 
@@ -30,8 +51,18 @@ export const PlantForm = () => {
         image: treflePlant.image_url,
         commonName: treflePlant.common_name,
         scientificName: treflePlant.scientific_name,
-        userId: plant.userId
+        userId: plant.userId,
+        type: plant.type,
+        fruit: plant.fruit,
+        flowerColor: plant.flower,
+        location: plant.location,
+        date: plant.date
         })
+
+        
+            
+            
+        
     }
 
     return(
@@ -40,49 +71,49 @@ export const PlantForm = () => {
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantName">Plant Name: </label>
-            <input type="" id="name" required autoFocus className="form-control"
-            value={treflePlant.common_name}/>
+            <input type="" id="commonName" required autoFocus className="form-control"
+            defaultValue={treflePlant.common_name}/>
         </div>
         </fieldset>
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantName">Plant Scientfic Name: </label>
-            <input type="text" id="sname" required autoFocus className="form-control"
-            value={treflePlant.scientific_name}/>
+            <input type="text" id="scientificName" onChange={handleControlledInputChange} required autoFocus className="form-control"
+            defaultValue={treflePlant.scientific_name}/>
         </div>
         </fieldset>
         <fieldset>
         <div className="form-group">
-        <label htmlFor="plantName">Type: </label>
-            <input type="text" id="type" required autoFocus className="form-control"
+        <label htmlFor="plantType">Type: </label>
+            <input type="text" id="type" onChange={handleControlledInputChange} required autoFocus className="form-control"
             value={plant.type}/>
         </div>
         </fieldset>
         <fieldset>
         <div className="form-group">
-        <label htmlFor="plantName">Fruit: </label>
-            <input type="text" id="fruit" required autoFocus className="form-control"
+        <label htmlFor="plantFruit">Fruit: </label>
+            <input type="text" id="fruit" onChange={handleControlledInputChange} required autoFocus className="form-control"
             value={plant.fruit}/>
         </div>
         </fieldset>
         <fieldset>
         <div className="form-group">
-        <label htmlFor="plantName">flower: </label>
-            <input type="text" id="flower" required autoFocus className="form-control"
+        <label htmlFor="plantFlower">flower: </label>
+            <input type="text" id="flowerColor" onChange={handleControlledInputChange} required autoFocus className="form-control"
             value={plant.flower}/>
         </div>
         </fieldset>
         <fieldset>
         <div className="form-group">
-        <label htmlFor="plantName">location: </label>
-            <input type="text" id="location" required autoFocus className="form-control"
+        <label htmlFor="plantLocation">location: </label>
+            <input type="text" id="location" onChange={handleControlledInputChange} required autoFocus className="form-control"
             value={plant.location}/>
         </div>
         </fieldset>
         <fieldset>
                 <div className="form-group">
                     <label htmlFor="date">Date Found: </label>
-                    <input type="date" id="dateFound"  required className="form-control" placeholder="Date found" value={plant.date} />
+                    <input type="date" id="date" onChange={handleControlledInputChange} required className="form-control" placeholder="Date found" value={plant.date} />
                 </div>
             </fieldset> 
         <button className="btn btn-primary" 

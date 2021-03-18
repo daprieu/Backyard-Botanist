@@ -13,43 +13,15 @@
   ],
   "plants": [
     {
-      "id": 1,
-      "commonName": "Scarlet Oak",
-      "scientificName": "Quercus coccinea",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "commonName": "Scarlet Oaaaak",
-      "scientificName": "Quercus coccinea",
-      "userId": 1
-    },
-    {
-      "image": "https://bs.plantnet.org/image/o/7d5f8b23418d38e40162f89def24a39afbb7371d",
-      "commonName": "mile a minute vine",
-      "scientificName": "Ipomoea cairica",
+      "image": "https://bs.plantnet.org/image/o/df1f10b61c416dae1abbeb8f3e01e7fba9f5e38c",
+      "commonName": "common pear",
+      "scientificName": "Pyrus communis",
       "userId": 1,
-      "id": 3
-    }
-  ],
-  "plantnotes": [
-    {
-      "id": 1,
-      "plantId": 1,
-      "type": "tree",
-      "fruit": "acorn",
-      "flowerColor": "N/A",
-      "location": "Shelby Park near the dog park",
-      "date": 1615914780
-    },
-    {
-      "id": 2,
-      "plantId": 2,
-      "type": "tree",
-      "fruit": "acorn",
-      "flowerColor": "N/A",
-      "location": "Shelby Park near the dog park",
-      "date": 1615914780
+      "type": "asdf",
+      "fruit": "asdf",
+      "location": "asdf",
+      "date": "2021-03-18",
+      "id": 1
     }
   ],
   "friends": [
