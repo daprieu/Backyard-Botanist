@@ -6,6 +6,7 @@ export const PlantContext = createContext()
 
 export const PlantProvider = (props) => {
     const [plants, setPlants] = useState([])
+    
     // console.log('plants: ', plants);
     
     //useState() hook to define a variable that holds the state 
@@ -17,9 +18,10 @@ export const PlantProvider = (props) => {
         .then(setPlants)
     }
 
-    const getPlantById = (id) => {
-        return fetch(`http://localhost:8088/plants/${id}?_expand=plantnotes`)
+    const getPlantsById = (id) => {
+        return fetch(`http://localhost:8088/plants/${id}?_embed=plantnotes`)
         .then(res => res.json())
+        
     }
 
 
@@ -36,7 +38,7 @@ export const PlantProvider = (props) => {
 
     return (
         <PlantContext.Provider value={{
-            plants, getPlants, getPlantById, addAPlant
+            plants, getPlants, getPlantsById, addAPlant
         }}>
             {props.children}
         </PlantContext.Provider>
