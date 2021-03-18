@@ -19,11 +19,18 @@
       "userId": 1
     },
     {
-        "id": 2,
-        "commonName": "Scarlet Oaaaak",
-        "scientificName": "Quercus coccinea",
-        "userId": 1
-      }
+      "id": 2,
+      "commonName": "Scarlet Oaaaak",
+      "scientificName": "Quercus coccinea",
+      "userId": 1
+    },
+    {
+      "image": "https://bs.plantnet.org/image/o/7d5f8b23418d38e40162f89def24a39afbb7371d",
+      "commonName": "mile a minute vine",
+      "scientificName": "Ipomoea cairica",
+      "userId": 1,
+      "id": 3
+    }
   ],
   "plantnotes": [
     {
@@ -36,14 +43,14 @@
       "date": 1615914780
     },
     {
-        "id": 2,
-        "plantId": 2,
-        "type": "tree",
-        "fruit": "acorn",
-        "flowerColor": "N/A",
-        "location": "Shelby Park near the dog park",
-        "date": 1615914780
-      }
+      "id": 2,
+      "plantId": 2,
+      "type": "tree",
+      "fruit": "acorn",
+      "flowerColor": "N/A",
+      "location": "Shelby Park near the dog park",
+      "date": 1615914780
+    }
   ],
   "friends": [
     {

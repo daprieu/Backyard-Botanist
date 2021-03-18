@@ -27,7 +27,7 @@ export const PlantNote = () => {
 
     return (
         <section className="plant">
-            
+            <img src={plants.image} height={300} alt="new"/>
             <h3 className="plant__name">Name: {plants.commonName}</h3>
             <div className="plant__sName">Scientfic name: {plants.scientificName}</div>
             <div className="plant__type">Type: {plants.plantnotes?.map(note => note.type)}</div>

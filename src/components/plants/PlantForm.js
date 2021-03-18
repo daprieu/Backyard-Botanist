@@ -40,15 +40,15 @@ export const PlantForm = () => {
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantName">Plant Name: </label>
-            <input type="text" id="name" required autoFocus className="form-control"
-            readOnly={treflePlant.common_name}/>
+            <input type="" id="name" required autoFocus className="form-control"
+            value={treflePlant.common_name}/>
         </div>
         </fieldset>
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantName">Plant Scientfic Name: </label>
             <input type="text" id="sname" required autoFocus className="form-control"
-            readOnly={treflePlant.scientific_name}/>
+            value={treflePlant.scientific_name}/>
         </div>
         </fieldset>
         <fieldset>
