@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 
 export const SearchPlantCard = ({plant}) => (
     <section className="quePlant">
-        <Link to={`/plants/add/`}>
+        <Link to={`/search/addplant/${plant.id}`}>
     <img 
-      src={plant.image_url}
+      src={plant.image_url} height={300}
       alt="new"
       />
       </Link>

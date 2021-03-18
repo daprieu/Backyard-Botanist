@@ -4,7 +4,7 @@ import { PlantContext } from "./PlantsProvider"
 
 export const PlantNote = () => {
 
-    const {getPlantById} = useContext(PlantContext)
+    const {getPlantsById} = useContext(PlantContext)
     const [plants, setPlants] = useState({})
     // console.log('plants: ', plants);
 
@@ -13,12 +13,10 @@ export const PlantNote = () => {
     // useParams from react-router-dom allows the app to read a parameter from the URL.
     
     useEffect(() => {
-        getPlantById(plantId)
+        getPlantsById(plantId)
         .then((res) => {
-            
             setPlants(res)
         })
-        
     }, [])
 
     const timeConverter = (UNIX_timestamp) => {
@@ -29,13 +27,14 @@ export const PlantNote = () => {
 
     return (
         <section className="plant">
+            <img src={plants.image} height={300} alt="new"/>
             <h3 className="plant__name">Name: {plants.commonName}</h3>
             <div className="plant__sName">Scientfic name: {plants.scientificName}</div>
-            <div className="plant__type">Type: {plants.plantnotes?.type}</div>
-            <div className="plant__fruit">Fruit: {plants.plantnotes?.fruit}</div>
-            <div className="plant__flowerColor">Flower Color: {plants.plantnotes?.flowerColor}</div>
-            <div className="plant__location">Location Found: {plants.plantnotes?.location}</div>
-            <div className="dateFound">Date Found: {timeConverter(plants.plantnotes?.date)}</div>
+            <div className="plant__type">Type: {plants.type}</div>
+            <div className="plant__fruit">Fruit: {plants.fruit}</div>
+            <div className="plant__flowerColor">Flower Color: {plants.flowerColor}</div>
+            <div className="plant__location">Location Found: {plants.location}</div>
+            <div className="dateFound">Date Found: {plants.date}</div>
         </section>
     )
 }

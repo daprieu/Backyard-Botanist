@@ -1,57 +1,39 @@
 {
-"users": [
+  "users": [
     {
-        "id": 1,
-        "name": "Alex Prieu",
-        "email": "aprieu@bb.com"
+      "id": 1,
+      "name": "Alex Prieu",
+      "email": "aprieu@bb.com"
     },
     {
-        "id": 2,
-        "name": "Professor Oak",
-        "email": "Oak@bb.com"
+      "id": 2,
+      "name": "Professor Oak",
+      "email": "Oak@bb.com"
     }
-],
-"plants": [
+  ],
+  "plants": [
     {
-        "id": 1,
-        "commonName": "Scarlet Oak",
-        "scientificName": "Quercus coccinea",
-        "plantnotesId": 1,
-        "userId": 1
+      "image": "https://bs.plantnet.org/image/o/df1f10b61c416dae1abbeb8f3e01e7fba9f5e38c",
+      "commonName": "common pear",
+      "scientificName": "Pyrus communis",
+      "userId": 1,
+      "type": "asdf",
+      "fruit": "asdf",
+      "location": "asdf",
+      "date": "2021-03-18",
+      "id": 1
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "currentUserId": 2,
+      "friendId": 1
     },
     {
-        "id": 2,
-        "commonName": "Sweetgum",
-        "scientificName": "Quercus coccinea",
-        "userId": 2
-    },
-    {
-        "id": 3,
-        "commonName": "violet",
-        "scientificName": "Quercus coccinea",
-        "userId": 1
+      "id": 2,
+      "currentUserId": 1,
+      "friendId": 2
     }
-],
-"plantnotes":[
-    {
-        "id": 1,
-        "type": "tree",
-        "fruit": "acorn",
-        "flowerColor": "N/A",
-        "location": "Shelby Park near the dog park",
-        "date" : 1615914780
-    }
-],
-"friends": [
-    {
-        "id": 1,
-        "currentUserId": 2,
-        "friendId": 1
-    },
-    {
-        "id": 2,
-        "currentUserId": 1,
-        "friendId": 2
-    }
-]
+  ]
 }
