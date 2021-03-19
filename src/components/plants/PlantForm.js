@@ -17,7 +17,7 @@ export const PlantForm = () => {
         scientificName: "",
         type: "",
         fruit: "",
-        flowerColor: "",
+        flower: "",
         location: "",
         date: ""
     })
@@ -54,15 +54,11 @@ export const PlantForm = () => {
         userId: plant.userId,
         type: plant.type,
         fruit: plant.fruit,
-        flowerColor: plant.flower,
+        flower: plant.flower,
         location: plant.location,
         date: plant.date
         })
-
-        
-            
-            
-        
+        .then(() => history.push("/myplants"))
     }
 
     return(
@@ -99,7 +95,7 @@ export const PlantForm = () => {
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantFlower">flower: </label>
-            <input type="text" id="flowerColor" onChange={handleControlledInputChange} required autoFocus className="form-control"
+            <input type="text" id="flower" onChange={handleControlledInputChange} required autoFocus className="form-control"
             value={plant.flower}/>
         </div>
         </fieldset>
