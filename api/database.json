@@ -13,13 +13,14 @@
   ],
   "plants": [
     {
-      "image": "https://bs.plantnet.org/image/o/df1f10b61c416dae1abbeb8f3e01e7fba9f5e38c",
-      "commonName": "common pear",
-      "scientificName": "Pyrus communis",
+      "image": "https://bs.plantnet.org/image/o/7d5f8b23418d38e40162f89def24a39afbb7371d",
+      "commonName": "mile a minute vine",
+      "scientificName": "Ipomoea cairica",
       "userId": 1,
-      "type": "asdf",
-      "fruit": "asdf",
-      "location": "asdf",
+      "type": "d",
+      "fruit": "d",
+      "flower": "d",
+      "location": "d",
       "date": "2021-03-18",
       "id": 1
     }

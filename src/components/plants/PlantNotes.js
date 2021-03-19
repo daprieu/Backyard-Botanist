@@ -32,7 +32,7 @@ export const PlantNote = () => {
             <div className="plant__sName">Scientfic name: {plants.scientificName}</div>
             <div className="plant__type">Type: {plants.type}</div>
             <div className="plant__fruit">Fruit: {plants.fruit}</div>
-            <div className="plant__flowerColor">Flower Color: {plants.flowerColor}</div>
+            <div className="plant__flowerColor">Flower Color: {plants.flower}</div>
             <div className="plant__location">Location Found: {plants.location}</div>
             <div className="dateFound">Date Found: {plants.date}</div>
         </section>
