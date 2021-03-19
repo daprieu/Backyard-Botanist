@@ -101,8 +101,8 @@ export const PlantForm = () => {
         <label htmlFor="plantName">Plant Name: </label>
             {plantId ? <input type="text" id="commonName" onChange={handleControlledInputChange} required autoFocus className="form-control"
             value={plant.commonName}/> :
-            <input type="text" id="commonName" required autoFocus className="form-control"
-            placeholder={treflePlant.common_name}
+            <input type="text" id="commonName" onChange={handleControlledInputChange} required autoFocus className="form-control"
+            value={treflePlant.common_name}
             />}
             {/* readOnly={treflePlant.common_name} */}
         </div>
@@ -112,9 +112,9 @@ export const PlantForm = () => {
         <label htmlFor="plantName">Plant Scientfic Name: </label>
         {plantId ? <input type="text" id="scientificName" onChange={handleControlledInputChange} required autoFocus className="form-control"
             value={plant.scientificName}/> :
-            <input type="text" id="scientificName" required autoFocus className="form-control"
+            <input type="text" id="scientificName" onChange={handleControlledInputChange} required autoFocus className="form-control"
             
-            placeholder={treflePlant.scientific_name}
+            value={treflePlant.scientific_name}
             />}
             {/* readOnly={treflePlant.scientific_name} */}
         </div>

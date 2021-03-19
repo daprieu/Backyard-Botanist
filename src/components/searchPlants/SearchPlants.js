@@ -11,7 +11,7 @@ export const PlantSearch = () => {
         Plant search:
         <input type="text"
           className="input--wide"
-          onKeyUp={(event) => setSearchTerms(event.target.value)}
+          onChange={(event) => setSearchTerms(event.target.value)}
           placeholder="Search for an plant... " />
     </>
     )

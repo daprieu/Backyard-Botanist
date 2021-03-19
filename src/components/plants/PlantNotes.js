@@ -4,7 +4,7 @@ import { PlantContext } from "./PlantsProvider"
 
 export const PlantNote = () => {
 
-    const {getPlantsById} = useContext(PlantContext)
+    const {getPlantsById, deletePlant} = useContext(PlantContext)
     const [plants, setPlants] = useState({})
     // console.log('plants: ', plants);
 
@@ -19,12 +19,15 @@ export const PlantNote = () => {
         })
     }, [])
 
-    // const timeConverter = (UNIX_timestamp) => {
-    //     var dateVar = new Date(UNIX_timestamp * 1000).toLocaleDateString("en-US") 
-    //     const time = `${dateVar}`
-    //     return time;
-    // }
+    
     const history = useHistory()
+
+    const releasePlant = () => {
+        deletePlant(plants.id)
+        .then(() => {
+            history.push("/myplants")
+        })
+    }
     return (
         <>
         <button onClick={() => {
@@ -42,7 +45,7 @@ export const PlantNote = () => {
             <button onClick={() => {
             history.push(`/myplants/edit/${plants.id}`)
             }}>Edit</button>
-            <button>Delete</button>
+            <button onClick={releasePlant}>Delete</button>
         </section>
         </>
     )

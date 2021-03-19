@@ -59,30 +59,6 @@
       "flower": "aa",
       "location": "",
       "date": ""
-    },
-    {
-      "id": 5,
-      "userId": 1,
-      "image": "https://d2seqvvyy3b8p2.cloudfront.net/d07382709196c9b7b156a5f9cdde0ff1.jpg",
-      "commonName": "Acer platanoidesaaaaaaa",
-      "scientificName": "Acer platanoidesaaaaaa",
-      "type": "",
-      "fruit": "",
-      "flower": "",
-      "location": "",
-      "date": ""
-    },
-    {
-      "id": 6,
-      "userId": 1,
-      "image": "https://bs.plantnet.org/image/o/ce1c2346d03820c8545c9e68ee7a39139a75e83c",
-      "commonName": "edible banana",
-      "scientificName": "Musa acuminata",
-      "type": "asdf",
-      "fruit": "asdf",
-      "flower": "asdf",
-      "location": "asdfasdf",
-      "date": "2021-03-19"
     }
   ],
   "friends": [
