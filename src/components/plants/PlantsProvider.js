@@ -19,11 +19,10 @@ export const PlantProvider = (props) => {
     }
 
     const getPlantsById = (id) => {
-        return fetch(`http://localhost:8088/plants/${id}?_embed=plantnotes`)
+        return fetch(`http://localhost:8088/plants/${id}`)
         .then(res => res.json())
         
     }
-
 
     const addAPlant = (plantObj) => {
         return fetch("http://localhost:8088/plants", {
@@ -35,11 +34,31 @@ export const PlantProvider = (props) => {
         })
             .then(() => getPlants(parseInt(sessionStorage.getItem("app_user_id"))))
     }
+// used to edit plant
+    const updatePlant = (plant) => {
+        return fetch(`http://localhost:8088/plants/${plant.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(plant)
+            })
+            .then(getPlants)
+            
+        }
+
+        const deletePlant = (plantId) => {
+            return fetch(`http://localhost:8088/plants/${plantId}`, {
+                method: "Delete",
+                })
+                .then(getPlants)
+                
+            }
 
 
     return (
         <PlantContext.Provider value={{
-            plants, getPlants, getPlantsById, addAPlant
+            plants, getPlants, getPlantsById, addAPlant, updatePlant, deletePlant
         }}>
             {props.children}
         </PlantContext.Provider>

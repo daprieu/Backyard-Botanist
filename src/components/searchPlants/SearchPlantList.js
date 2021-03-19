@@ -5,10 +5,10 @@ import { SearchPlantsContext } from "./SearchPlantsProvider"
 export const SearchablePlantList = () => {
 
     const {searchablePlants, getSearchablePlants, searchTerms} = useContext(SearchPlantsContext)
-    console.log('searchTerms: ', searchTerms);
+    // console.log('searchTerms: ', searchTerms);
 
     const [filteredPlants, setFiltered] = useState([])
-    console.log('filteredPlants: ', filteredPlants);
+    
     
 
     // the first useEffect takes the fetchcall function and passes the searchterms from the 
@@ -17,11 +17,7 @@ export const SearchablePlantList = () => {
         
         if (searchTerms !== "") {
         getSearchablePlants(searchTerms)
-        .then(a => console.log('a: ', a))
-        
-        
     }
-    
     }, [searchTerms])
 
     // the second useEffect takes the searchablePlants that has been updated by the getSearchablePlants

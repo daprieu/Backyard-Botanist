@@ -26,6 +26,9 @@ export const AppViews = () => {
             <Route exact path="/search/addplant/:trefleId(\d+)">
                 <PlantForm />
             </Route>
+            <Route exact path="/myplants/edit/:plantId(\d+)">
+                <PlantForm />
+            </Route>
         </SearchPlantsProvider>
         </PlantProvider>
         </>

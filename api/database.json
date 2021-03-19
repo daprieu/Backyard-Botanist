@@ -13,16 +13,52 @@
   ],
   "plants": [
     {
-      "image": "https://bs.plantnet.org/image/o/7d5f8b23418d38e40162f89def24a39afbb7371d",
-      "commonName": "mile a minute vine",
-      "scientificName": "Ipomoea cairica",
+      "id": 1,
       "userId": 1,
-      "type": "d",
-      "fruit": "d",
-      "flower": "d",
-      "location": "d",
-      "date": "2021-03-18",
-      "id": 1
+      "image": "https://bs.plantnet.org/image/o/df1f10b61c416dae1abbeb8f3e01e7fba9f5e38c",
+      "commonName": "common pear",
+      "scientificName": "Pyrus communis",
+      "type": "asdfasdfaa",
+      "fruit": "asdfasdfaa",
+      "flower": "asdfasdf",
+      "location": "asdfasdf",
+      "date": "2021-03-27"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/22a17172aa9f74e9003de00a1e3aa532064ccfe7",
+      "commonName": "corn brome",
+      "scientificName": "Bromus squarrosus",
+      "type": "fff",
+      "fruit": "ffffffffffff",
+      "flower": "ff",
+      "location": "fff",
+      "date": ""
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/3ce9fcc4fd1562e49722ec3786ad88e80f25fb27",
+      "commonName": null,
+      "scientificName": "Schefflera delavayi",
+      "type": "asdf",
+      "fruit": "asdf",
+      "flower": "asdf",
+      "location": "asdf",
+      "date": ""
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "image": "https://bs.floristic.org/image/o/d2747c12a135a00ff8e6d8af86acbec3c6f8248d",
+      "commonName": "Acer pseudoplatanu",
+      "scientificName": "Acer pseudoplatanus",
+      "type": "tree",
+      "fruit": "samara",
+      "flower": "aa",
+      "location": "",
+      "date": ""
     }
   ],
   "friends": [

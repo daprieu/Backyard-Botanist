@@ -5,77 +5,118 @@ import { PlantContext, PlantProvider } from "./PlantsProvider";
 
 
 export const PlantForm = () => {
-    const { addAPlant, addPlantNote, getPlants } = useContext(PlantContext)
-    const {treflePlant, getSPlantsById } = useContext(SearchPlantsContext)
-    // const [ ] = useState({})
-    console.log('treflePlant: ', treflePlant);
+        const { addAPlant, getPlants, updatePlant, getPlantsById } = useContext(PlantContext)
+        const {treflePlant, getSPlantsById } = useContext(SearchPlantsContext)
+        // const [ ] = useState({})
+        console.log('treflePlant: ', treflePlant);
 
-    const [plant, setPlant] = useState({
-        userId: parseInt(sessionStorage.getItem("app_user_id")),
-        image: "",
-        commonName: "",
-        scientificName: "",
-        type: "",
-        fruit: "",
-        flower: "",
-        location: "",
-        date: ""
-    })
-    console.log('plant: ', plant);
-    
-    const { trefleId } = useParams()
-    console.log('trefleId: ', trefleId);
-    const history = useHistory()
-
-    useEffect(() => {
-        getSPlantsById(trefleId)
+        const [plant, setPlant] = useState({
+            userId: parseInt(sessionStorage.getItem("app_user_id")),
+            image: "",
+            commonName: "",
+            scientificName: "",
+            type: "",
+            fruit: "",
+            flower: "",
+            location: "",
+            date: ""
+        })
+        console.log('plant: ', plant);
         
-    }, [])
-    const handleControlledInputChange = (event) => {
-        /* When changing a state object or array,
-        always create a copy, make changes, and then set state.*/
-       const newPlant = { ...plant }
-       let selectedVal = event.target.value
-       
-       /* location is an object with properties.
-       Set the property to the new value
-       using object bracket notation. */
-       newPlant[event.target.id] = selectedVal
-       // update state
-       setPlant(newPlant)
-     }
+        
+        const { trefleId, plantId } = useParams()
+        console.log('plantId: ', plantId);
+        console.log('trefleId: ', trefleId);
+        
+        const history = useHistory()
 
-    const handleSavePlant = () => {
+        // useEffect(() => {
+        //     getSPlantsById(trefleId)
+            
+        // }, [])
+        const handleControlledInputChange = (event) => {
+            /* When changing a state object or array,
+            always create a copy, make changes, and then set state.*/
+        const newPlant = { ...plant }
+        let selectedVal = event.target.value
+        
+        /* location is an object with properties.
+        Set the property to the new value
+        using object bracket notation. */
+        newPlant[event.target.id] = selectedVal
+        // update state
+        setPlant(newPlant)
+        }
 
-        addAPlant({
-        image: treflePlant.image_url,
-        commonName: treflePlant.common_name,
-        scientificName: treflePlant.scientific_name,
-        userId: plant.userId,
-        type: plant.type,
-        fruit: plant.fruit,
-        flower: plant.flower,
-        location: plant.location,
-        date: plant.date
+        const handleSavePlant = () => {
+            if (plantId) {
+                updatePlant({
+                    id: plant.id,
+                    userId: plant.userId,
+                    image: plant.image,
+                    commonName: plant.commonName,
+                    scientificName: plant.scientificName,
+                    type: plant.type,
+                    fruit: plant.fruit,
+                    flower: plant.flower,
+                    location: plant.location,
+                    date: plant.date
+                })
+            .then(() => history.push(`/myplants/notes/${plant.id}`))
+            } else {
+                addAPlant({
+                    userId: plant.userId,
+                    image: treflePlant.image_url,
+                    commonName: treflePlant.common_name,
+                    scientificName: treflePlant.scientific_name,
+                    type: plant.type,
+                    fruit: plant.fruit,
+                    flower: plant.flower,
+                    location: plant.location,
+                    date: plant.date
         })
         .then(() => history.push("/myplants"))
     }
+    }
+
+    useEffect(() => {
+        if (plantId) {
+            getPlantsById(plantId)
+            .then(plant => {
+                setPlant(plant)
+            })
+        } else { 
+            getSPlantsById(trefleId)
+        }
+    }, [])
+
 
     return(
         <form className="plantForm">
-            <img src={treflePlant.image_url} height={400} alt="new"/>
+            <h2 className="plantForm__title">{plantId ? "Edit Plant" : "AddPlant"}</h2>
+             {plantId ? <img src={plant.image} height={400} alt="new"/> :
+             <img src={treflePlant.image_url} height={400} alt="new"/>}
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantName">Plant Name: </label>
-            <input type="" id="commonName" required autoFocus className="form-control"
-            defaultValue={treflePlant.common_name}/>
+            {plantId ? <input type="text" id="commonName" onChange={handleControlledInputChange} required autoFocus className="form-control"
+            value={plant.commonName}/> :
+            <input type="text" id="commonName" onChange={handleControlledInputChange} required autoFocus className="form-control"
+            value={treflePlant.common_name}
+            />}
+            {/* readOnly={treflePlant.common_name} */}
         </div>
         </fieldset>
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantName">Plant Scientfic Name: </label>
+        {plantId ? <input type="text" id="scientificName" onChange={handleControlledInputChange} required autoFocus className="form-control"
+            value={plant.scientificName}/> :
             <input type="text" id="scientificName" onChange={handleControlledInputChange} required autoFocus className="form-control"
-            defaultValue={treflePlant.scientific_name}/>
+            
+            value={treflePlant.scientific_name}
+            />}
+            {/* readOnly={treflePlant.scientific_name} */}
         </div>
         </fieldset>
         <fieldset>
@@ -117,7 +158,7 @@ export const PlantForm = () => {
             event.preventDefault()
             handleSavePlant()
         }}>
-        Post
+        {plantId ? "Save" : "AddPlant"}
         </button>
     </form>
     )

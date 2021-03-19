@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react"
-import { useParams } from "react-router"
+import { useHistory, useParams } from "react-router"
 import { PlantContext } from "./PlantsProvider"
 
 export const PlantNote = () => {
 
-    const {getPlantsById} = useContext(PlantContext)
+    const {getPlantsById, deletePlant} = useContext(PlantContext)
     const [plants, setPlants] = useState({})
     // console.log('plants: ', plants);
 
@@ -19,13 +19,20 @@ export const PlantNote = () => {
         })
     }, [])
 
-    const timeConverter = (UNIX_timestamp) => {
-        var dateVar = new Date(UNIX_timestamp * 1000).toLocaleDateString("en-US") 
-        const time = `${dateVar}`
-        return time;
-    }
+    
+    const history = useHistory()
 
+    const releasePlant = () => {
+        deletePlant(plants.id)
+        .then(() => {
+            history.push("/myplants")
+        })
+    }
     return (
+        <>
+        <button onClick={() => {
+            history.push(`/myplants`)
+            }}>Back to My Plants</button>
         <section className="plant">
             <img src={plants.image} height={300} alt="new"/>
             <h3 className="plant__name">Name: {plants.commonName}</h3>
@@ -35,6 +42,11 @@ export const PlantNote = () => {
             <div className="plant__flowerColor">Flower Color: {plants.flower}</div>
             <div className="plant__location">Location Found: {plants.location}</div>
             <div className="dateFound">Date Found: {plants.date}</div>
+            <button onClick={() => {
+            history.push(`/myplants/edit/${plants.id}`)
+            }}>Edit</button>
+            <button onClick={releasePlant}>Delete</button>
         </section>
+        </>
     )
 }
