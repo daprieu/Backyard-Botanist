@@ -56,32 +56,13 @@ export const PlantNote = () => {
         <Button onClick={() => {
             history.push(`/myplants/edit/${plants.id}`)
             }}>Edit</Button>
-            <Button onClick={releasePlant}>Delete</Button>
-      </Card>
-      </Col>
-      </Row>
-      </Container>
-      </>
+            <Button variant="danger" onClick={releasePlant}>Delete</Button>
+        </Card>
+        </Col>
+        </Row>
+        </Container>
+        </>
         
     )
 }
 
-{/* <>
-        <button onClick={() => {
-            history.push(`/myplants`)
-            }}>Back to My Plants</button>
-        <section className="plant">
-            <img src={plants.image} height={300} alt="new"/>
-            <h3 className="plant__name">Name: {plants.commonName}</h3>
-            <div className="plant__sName">Scientfic name: {plants.scientificName}</div>
-            <div className="plant__type">Type: {plants.type}</div>
-            <div className="plant__fruit">Fruit: {plants.fruit}</div>
-            <div className="plant__flowerColor">Flower Color: {plants.flower}</div>
-            <div className="plant__location">Location Found: {plants.location}</div>
-            <div className="dateFound">Date Found: {plants.date}</div>
-            <button onClick={() => {
-            history.push(`/myplants/edit/${plants.id}`)
-            }}>Edit</button>
-            <button onClick={releasePlant}>Delete</button>
-        </section>
-        </> */}
