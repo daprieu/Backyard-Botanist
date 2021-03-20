@@ -10,13 +10,13 @@ export const SearchPlantsProvider = (props) => {
 
     const getSearchablePlants = (plantName) => {
         
-        return fetch(`${trefleAPI.baseURL}${trefleAPI.apiKey}&q=${plantName}`)
+        return fetch(`https://powerful-plateau-15272.herokuapp.com/${trefleAPI.baseURL}${trefleAPI.apiKey}&q=${plantName}`)
         .then(res => res.json())
         .then(data => setSearchablePlants(data.data))
         
     }
     const getSPlantsById =  (id) => {
-        return fetch(`https://trefle.io/api/v1/plants/${id}?token=${trefleAPI.apiKey}`)
+        return fetch(`https://powerful-plateau-15272.herokuapp.com/https://trefle.io/api/v1/plants/${id}?token=${trefleAPI.apiKey}`)
         .then(res => res.json())
         .then(data => setTreflePlant(data.data))
     }

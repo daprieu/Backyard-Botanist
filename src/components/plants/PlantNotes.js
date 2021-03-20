@@ -1,6 +1,12 @@
+
 import React, { useContext, useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router"
 import { PlantContext } from "./PlantsProvider"
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
 
 export const PlantNote = () => {
 
@@ -30,6 +36,37 @@ export const PlantNote = () => {
     }
     return (
         <>
+        <Button onClick={() => {
+            history.push(`/myplants`)
+            }}>Back to My Plants</Button>
+        <Container>
+        <Row>
+        <Col>
+        <Card style={{ width: '40rem' }}>
+        <Card.Img variant="top" src={plants.image} />
+        <Card.Body>
+          <Card.Title>{plants.scientificName}</Card.Title>
+          <Card.Title>{plants.commonName}</Card.Title>
+          <Card.Text>Type: {plants.type}</Card.Text>
+          <Card.Text>Fruit: {plants.fruit}</Card.Text>
+          <Card.Text>Flower: {plants.flower}</Card.Text>
+          <Card.Text>Location: {plants.location}</Card.Text>
+          <Card.Text>Date Found: {plants.date}</Card.Text>
+        </Card.Body>
+        <Button onClick={() => {
+            history.push(`/myplants/edit/${plants.id}`)
+            }}>Edit</Button>
+            <Button onClick={releasePlant}>Delete</Button>
+      </Card>
+      </Col>
+      </Row>
+      </Container>
+      </>
+        
+    )
+}
+
+{/* <>
         <button onClick={() => {
             history.push(`/myplants`)
             }}>Back to My Plants</button>
@@ -47,6 +84,4 @@ export const PlantNote = () => {
             }}>Edit</button>
             <button onClick={releasePlant}>Delete</button>
         </section>
-        </>
-    )
-}
+        </> */}

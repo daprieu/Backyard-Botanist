@@ -42,11 +42,11 @@
       "image": "https://bs.plantnet.org/image/o/3ce9fcc4fd1562e49722ec3786ad88e80f25fb27",
       "commonName": null,
       "scientificName": "Schefflera delavayi",
-      "type": "asdf",
-      "fruit": "asdf",
-      "flower": "asdf",
-      "location": "asdf",
-      "date": ""
+      "type": "treee",
+      "fruit": "na",
+      "flower": "na",
+      "location": "lowes",
+      "date": "2021-03-19"
     },
     {
       "id": 4,
@@ -59,6 +59,18 @@
       "flower": "aa",
       "location": "",
       "date": ""
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/48c8c42a836c9e8b1cc3c5e1acf1fa28ca3c6a01",
+      "commonName": "French lavender",
+      "scientificName": "Lavandula stoechas",
+      "type": "flowering plant",
+      "fruit": "na",
+      "flower": "purple lavender flower",
+      "location": "France",
+      "date": "2021-03-19",
+      "id": 5
     }
   ],
   "friends": [
