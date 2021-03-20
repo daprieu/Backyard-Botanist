@@ -29,7 +29,7 @@ export const PlantList = () => {
         <h3>{currentUser}'s Plants</h3>
         <section  class="container">
             
-        <div className="d-flex flex-wrap p-2 col-example">
+        <div className="d-flex justify-content-center flex-wrap p-2 col-example">
             
             {/* {console.log("friends list render", friends)} */}
             {   

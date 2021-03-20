@@ -13,18 +13,6 @@
   ],
   "plants": [
     {
-      "id": 1,
-      "userId": 1,
-      "image": "https://bs.plantnet.org/image/o/df1f10b61c416dae1abbeb8f3e01e7fba9f5e38c",
-      "commonName": "common pear",
-      "scientificName": "Pyrus communis",
-      "type": "asdfasdfaa",
-      "fruit": "asdfasdfaa",
-      "flower": "asdfasdf",
-      "location": "asdfasdf",
-      "date": "2021-03-27"
-    },
-    {
       "id": 2,
       "userId": 1,
       "image": "https://bs.plantnet.org/image/o/22a17172aa9f74e9003de00a1e3aa532064ccfe7",

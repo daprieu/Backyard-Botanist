@@ -39,7 +39,7 @@ export const PlantNote = () => {
         <Button onClick={() => {
             history.push(`/myplants`)
             }}>Back to My Plants</Button>
-        <Container>
+        <Container className="d-flex justify-content-center flex-wrap p-2 col-example">
         <Row>
         <Col>
         <Card style={{ width: '40rem' }}>

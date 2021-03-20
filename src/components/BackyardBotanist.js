@@ -12,6 +12,7 @@ import { AppViews } from "./AppViews"
 
 export const BackyardBotanist = () => (
     <>
+    <section className="App">
     <Route render={() => {
       if (sessionStorage.getItem(userStorageKey)) {
         return (
@@ -31,6 +32,7 @@ export const BackyardBotanist = () => (
   <Route path="/register">
     <Register />
   </Route>
+  </section>
   </>
   );
 

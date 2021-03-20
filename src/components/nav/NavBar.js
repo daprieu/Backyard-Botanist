@@ -1,25 +1,20 @@
 import React from "react"
+import { Nav, Navbar } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 
 export const NavBar = (props) => {
     return (
-        <nav>
-
-        <ul className="nav nav-tabs" id="myTab" role="tablist">
-            <li className="nav-item">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Brand>Backyard Botanist</Navbar.Brand>
+        <Nav className="mr-auto">
             <Link className="nav-link" to="/myplants">My Plants</Link>
-            </li>
-            <li className="nav-item" role="presentation">
             <Link className="nav-link" to="/search">Search</Link>
-            </li>
-            <li className="nav-item">
             <Link className="nav-link" to="/friends">Friends</Link>
-            </li>
-            <li>
+        </Nav>
+        <Nav>
             <Link className="nav-link" to="/">Log Out</Link>    
-            </li>
-        </ul>
-        </nav>
+        </Nav>
+        </Navbar>
     )
 }
