@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from "react"
 import { PlantCard } from "./PlantCard"
-
 import { PlantContext } from "./PlantsProvider"
+import Row from "react-bootstrap/Row"
+import Container from "react-bootstrap/Container"
 
 export const PlantList = () => {
 
@@ -26,7 +27,10 @@ export const PlantList = () => {
     return (
         <>
         <h3>{currentUser}'s Plants</h3>
-        <div className="plants">
+        <section  class="container">
+            
+        <div className="d-flex justify-content-center flex-wrap p-2 col-example">
+            
             {/* {console.log("friends list render", friends)} */}
             {   
                 plants.map(plant => {
@@ -34,6 +38,8 @@ export const PlantList = () => {
                 })
             }
         </div>
+        </section>
+            
         </>
     )
 }

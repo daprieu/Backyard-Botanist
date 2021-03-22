@@ -13,18 +13,6 @@
   ],
   "plants": [
     {
-      "id": 1,
-      "userId": 1,
-      "image": "https://bs.plantnet.org/image/o/df1f10b61c416dae1abbeb8f3e01e7fba9f5e38c",
-      "commonName": "common pear",
-      "scientificName": "Pyrus communis",
-      "type": "asdfasdfaa",
-      "fruit": "asdfasdfaa",
-      "flower": "asdfasdf",
-      "location": "asdfasdf",
-      "date": "2021-03-27"
-    },
-    {
       "id": 2,
       "userId": 1,
       "image": "https://bs.plantnet.org/image/o/22a17172aa9f74e9003de00a1e3aa532064ccfe7",
@@ -42,11 +30,11 @@
       "image": "https://bs.plantnet.org/image/o/3ce9fcc4fd1562e49722ec3786ad88e80f25fb27",
       "commonName": null,
       "scientificName": "Schefflera delavayi",
-      "type": "asdf",
-      "fruit": "asdf",
-      "flower": "asdf",
-      "location": "asdf",
-      "date": ""
+      "type": "treee",
+      "fruit": "na",
+      "flower": "na",
+      "location": "lowes",
+      "date": "2021-03-19"
     },
     {
       "id": 4,
@@ -59,6 +47,66 @@
       "flower": "aa",
       "location": "",
       "date": ""
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/810dbe6e4fdb7204d2617f5af19460482194e12e",
+      "commonName": "Japanese tree lilac",
+      "scientificName": "Syringa reticulata",
+      "type": "",
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": "",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/1206af005f5a2ef058fd1faa777e8cb072ba68ca",
+      "commonName": "Portia tree",
+      "scientificName": "Thespesia populnea",
+      "type": "",
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": "",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/15fb653fe1ab6d7010c3e29335aa087e6ab49d9c",
+      "commonName": "strawberry tree",
+      "scientificName": "Arbutus unedo",
+      "type": "",
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": "",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/f01ce76acc1d8a86fc1a661b4234cc5d8aa506e8",
+      "commonName": "velvet tree",
+      "scientificName": "Miconia calvescens",
+      "type": "",
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": "",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/da8b55376ebd33df2d86e751fc26f73f2c27bbeb",
+      "commonName": "Apple Bush",
+      "scientificName": "Pterocaulon sphacelatum",
+      "type": "bush",
+      "fruit": "N/A",
+      "flower": "aasdf",
+      "location": "asdf",
+      "date": "2021-03-22",
+      "id": 10
     }
   ],
   "friends": [

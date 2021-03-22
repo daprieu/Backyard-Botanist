@@ -5,12 +5,14 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { userStorageKey } from "./auth/authSettings"
 import { UserProvider } from "./users/UserProvider"
-import { NavBar } from "./users/UserList"
+import { NavBar } from "./nav/NavBar"
 import { AppViews } from "./AppViews"
+// import { Navbar } from "react-bootstrap"
 
 
 export const BackyardBotanist = () => (
     <>
+    <section className="App">
     <Route render={() => {
       if (sessionStorage.getItem(userStorageKey)) {
         return (
@@ -30,6 +32,7 @@ export const BackyardBotanist = () => (
   <Route path="/register">
     <Register />
   </Route>
+  </section>
   </>
   );
 

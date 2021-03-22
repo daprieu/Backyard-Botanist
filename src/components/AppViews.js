@@ -8,14 +8,18 @@ import { SearchablePlantList } from "./searchPlants/SearchPlantList"
 import { PlantSearch } from "./searchPlants/SearchPlants"
 import { SearchPlantsProvider } from "./searchPlants/SearchPlantsProvider"
 
+
+
 export const AppViews = () => {
     return (
         <>
         <PlantProvider>
         <SearchPlantsProvider>
+            
             <Route exact path="/myplants">
                 <PlantList />
             </Route>
+            
             <Route exact path="/myplants/notes/:plantId(\d+)">
                 <PlantNote />
             </Route>
@@ -29,6 +33,7 @@ export const AppViews = () => {
             <Route exact path="/myplants/edit/:plantId(\d+)">
                 <PlantForm />
             </Route>
+        
         </SearchPlantsProvider>
         </PlantProvider>
         </>

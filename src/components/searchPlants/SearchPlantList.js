@@ -36,7 +36,7 @@ export const SearchablePlantList = () => {
 
     return (
         <>
-        <div className="searchedPlants">
+        <div className="d-flex justify-content-center flex-wrap p-2 col-example">
             {
                 filteredPlants.map(plant => <SearchPlantCard key={plant.id} plant={plant} />)
             }
