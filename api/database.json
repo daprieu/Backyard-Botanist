@@ -50,18 +50,6 @@
     },
     {
       "userId": 1,
-      "image": "https://bs.plantnet.org/image/o/48c8c42a836c9e8b1cc3c5e1acf1fa28ca3c6a01",
-      "commonName": "French lavender",
-      "scientificName": "Lavandula stoechas",
-      "type": "flowering plant",
-      "fruit": "na",
-      "flower": "purple lavender flower",
-      "location": "France",
-      "date": "2021-03-19",
-      "id": 5
-    },
-    {
-      "userId": 1,
       "image": "https://bs.plantnet.org/image/o/810dbe6e4fdb7204d2617f5af19460482194e12e",
       "commonName": "Japanese tree lilac",
       "scientificName": "Syringa reticulata",
@@ -107,6 +95,18 @@
       "location": "",
       "date": "",
       "id": 9
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/da8b55376ebd33df2d86e751fc26f73f2c27bbeb",
+      "commonName": "Apple Bush",
+      "scientificName": "Pterocaulon sphacelatum",
+      "type": "bush",
+      "fruit": "N/A",
+      "flower": "aasdf",
+      "location": "asdf",
+      "date": "2021-03-22",
+      "id": 10
     }
   ],
   "friends": [
