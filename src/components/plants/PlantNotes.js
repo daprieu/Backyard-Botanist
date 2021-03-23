@@ -39,10 +39,10 @@ export const PlantNote = () => {
         <Button onClick={() => {
             history.push(`/myplants`)
             }}>Back to My Plants</Button>
-        <Container className="d-flex justify-content-center flex-wrap p-2 col-example">
+        <Container className="d-flex justify-content-center flex-wrap p-2 col-example ">
         <Row>
         <Col>
-        <Card style={{ width: '40rem' }}>
+        <Card  style={{ width: '40rem' }}>
         <Card.Img variant="top" src={plants.image} />
         <Card.Body>
           <Card.Title>{plants.scientificName}</Card.Title>

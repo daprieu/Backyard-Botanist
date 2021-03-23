@@ -1,8 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import { PlantCard } from "./PlantCard"
 import { PlantContext } from "./PlantsProvider"
-import Row from "react-bootstrap/Row"
-import Container from "react-bootstrap/Container"
+
 
 export const PlantList = () => {
 
@@ -13,7 +12,7 @@ export const PlantList = () => {
     // console.log('userPlants: ', plants);
     //import the context object created in the provider component so that 
     // the Context hook can access the objects it exposes.
-    // This state changes when `getFriends()` is invoked below
+    // This state changes when `getPlants()` is invoked below
     
     useEffect(() => {
         
