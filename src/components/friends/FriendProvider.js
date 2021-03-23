@@ -7,6 +7,7 @@ export const FriendContext = createContext()
 export const FriendProvider = (props) => {
     
     const [friends, setFriends] = useState([])
+    const [friendPlants, setFriendPlants] = useState([])
     
 
     
@@ -19,15 +20,15 @@ export const FriendProvider = (props) => {
         .then(setFriends)
     }
 
-    const getPlantByFriendId = (id) => {
+    const getPlantsByFriendId = (id) => {
         return fetch(`http://localhost:8088/users/${id}?_embed=plants`)
         .then(res => res.json())
-
+        .then(setFriendPlants)
     }
 
     return (
         <FriendContext.Provider value={{
-            friends, getFriends, getPlantByFriendId
+            friends, getFriends, friendPlants, getPlantsByFriendId
             
         }}>
             {props.children}

@@ -26,7 +26,7 @@ export const PlantList = () => {
     return (
         <>
         <h3>{currentUser}'s Plants</h3>
-        <section  class="container">
+        <section  className="container">
             
         <div className="d-flex justify-content-center flex-wrap p-2 col-example">
             

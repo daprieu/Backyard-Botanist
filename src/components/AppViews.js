@@ -1,6 +1,7 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { FriendList } from "./friends/FriendList"
+import { FriendPlantList } from "./friends/FriendPlantList"
 
 
 import { FriendProvider } from "./friends/FriendProvider"
@@ -43,6 +44,9 @@ export const AppViews = () => {
         <FriendProvider>
             <Route exact path="/friends">
                 <FriendList />
+            </Route>
+            <Route exact path="/friends/friendplants/:friendId(\d+)">
+                <FriendPlantList />
             </Route>
         </FriendProvider>
         </SearchPlantsProvider>

@@ -9,6 +9,14 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 
 export const PlantNote = () => {
+    
+    const styles = {
+        cardImage: {
+            objectFit: 'cover',
+            borderRadius: '1rem',
+            height: '25rem'
+          }
+        }
 
     const {getPlantsById, deletePlant} = useContext(PlantContext)
     const [plants, setPlants] = useState({})
@@ -42,8 +50,8 @@ export const PlantNote = () => {
         <Container className="d-flex justify-content-center flex-wrap p-2 col-example ">
         <Row>
         <Col>
-        <Card  style={{ width: '40rem' }}>
-        <Card.Img variant="top" src={plants.image} />
+        <Card style={{ width: '40rem', borderRadius: '1rem' }}>
+        <Card.Img variant="top" src={plants.image} style={styles.cardImage}/>
         <Card.Body>
           <Card.Title>{plants.scientificName}</Card.Title>
           <Card.Title>{plants.commonName}</Card.Title>
