@@ -6,7 +6,7 @@ export const FriendPlantContext = createContext()
 
 export const FriendProvider = (props) => {
     const [friends, setFriends] = useState([])
-    const [friendById, setFriend] = useState([])
+    const [plants, setPlants] = useState([])
     // console.log('friends: ', friends);
     
     // console.log('plants: ', plants);
@@ -20,15 +20,21 @@ export const FriendProvider = (props) => {
         .then(setFriends)
     }
 
+    const getFriendPlants = () => {
+        return fetch(`http://localhost:8088/plants/?_expand=user&/?userId=${(parseInt(sessionStorage.getItem("app_user_id")))}`)
+        .then(res => res.json())
+        .then(setPlants)
+    }
 
     const getPlantByFriendId = (id) => {
         return fetch(`http://localhost:8088/users/${id}?_embed=plants`)
         .then(res => res.json())
         
     }
+
     return (
         <FriendPlantContext.Provider value={{
-            friends, getFriends, getPlantByFriendId, friendById
+            friends, getFriends, getPlantByFriendId, getFriendPlants, plants
             
         }}>
             {props.children}

@@ -7,6 +7,7 @@ import { userStorageKey } from "./auth/authSettings"
 import { UserProvider } from "./users/UserProvider"
 import { NavBar } from "./nav/NavBar"
 import { AppViews } from "./AppViews"
+import { Logout } from "./auth/LogOut"
 // import { Navbar } from "react-bootstrap"
 
 
@@ -31,6 +32,9 @@ export const BackyardBotanist = () => (
   </Route>
   <Route path="/register">
     <Register />
+  </Route>
+  <Route path="/logout">
+    <Logout />
   </Route>
   </section>
   </>

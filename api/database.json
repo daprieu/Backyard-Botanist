@@ -13,22 +13,22 @@
     {
         "id": 3,
         "name": "Professor Birch",
-        "email": "aprieu@bb.com"
+        "email": "Birch@bb.com"
     },
     {
         "id": 4,
         "name": "Professor Elm",
-        "email": "Oak@bb.com"
+        "email": "Elm@bb.com"
     },
     {
         "id": 5,
         "name": "Professor Juniper",
-        "email": "aprieu@bb.com"
+        "email": "Juniper@bb.com"
     },
     {
         "id": 6,
         "name": "Professor Magnolia",
-        "email": "Oak@bb.com"
+        "email": "Magnolia@bb.com"
     }
   ],
   "plants": [
