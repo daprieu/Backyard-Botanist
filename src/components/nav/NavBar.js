@@ -10,10 +10,10 @@ export const NavBar = (props) => {
         <Nav className="mr-auto">
             <Link className="nav-link" to="/myplants">My Plants</Link>
             <Link className="nav-link" to="/search">Search</Link>
-            <Link className="nav-link" to="/friends">Friends</Link>
+            <Link className="nav-link" to="/friendsPlants">Friend's Plants</Link>
         </Nav>
         <Nav>
-            <Link className="nav-link" to="/">Log Out</Link>    
+            <Link className="nav-link" to="/logout">Log Out</Link>    
         </Nav>
         </Navbar>
     )

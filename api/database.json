@@ -1,14 +1,34 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Alex Prieu",
-      "email": "aprieu@bb.com"
+        "id": 1,
+        "name": "Alex Prieu",
+        "email": "aprieu@bb.com"
     },
     {
-      "id": 2,
-      "name": "Professor Oak",
-      "email": "Oak@bb.com"
+        "id": 2,
+        "name": "Professor Oak",
+        "email": "Oak@bb.com"
+    },
+    {
+        "id": 3,
+        "name": "Professor Birch",
+        "email": "Birch@bb.com"
+    },
+    {
+        "id": 4,
+        "name": "Professor Elm",
+        "email": "Elm@bb.com"
+    },
+    {
+        "id": 5,
+        "name": "Professor Juniper",
+        "email": "Juniper@bb.com"
+    },
+    {
+        "id": 6,
+        "name": "Professor Magnolia",
+        "email": "Magnolia@bb.com"
     }
   ],
   "plants": [
@@ -85,7 +105,7 @@
       "id": 8
     },
     {
-      "userId": 1,
+      "userId": 4,
       "image": "https://bs.plantnet.org/image/o/f01ce76acc1d8a86fc1a661b4234cc5d8aa506e8",
       "commonName": "velvet tree",
       "scientificName": "Miconia calvescens",
@@ -97,7 +117,7 @@
       "id": 9
     },
     {
-      "userId": 1,
+      "userId": 3,
       "image": "https://bs.plantnet.org/image/o/da8b55376ebd33df2d86e751fc26f73f2c27bbeb",
       "commonName": "Apple Bush",
       "scientificName": "Pterocaulon sphacelatum",
@@ -107,18 +127,57 @@
       "location": "asdf",
       "date": "2021-03-22",
       "id": 10
-    }
+    },
+    {
+        "userId": 2,
+        "image": "https://bs.plantnet.org/image/o/f01ce76acc1d8a86fc1a661b4234cc5d8aa506e8",
+        "commonName": "velvet tree",
+        "scientificName": "Miconia calvescens",
+        "type": "",
+        "fruit": "",
+        "flower": "",
+        "location": "",
+        "date": "",
+        "id": 11
+      },
+      {
+        "userId": 2,
+        "image": "https://bs.plantnet.org/image/o/da8b55376ebd33df2d86e751fc26f73f2c27bbeb",
+        "commonName": "Apple Bush",
+        "scientificName": "Pterocaulon sphacelatum",
+        "type": "bush",
+        "fruit": "N/A",
+        "flower": "aasdf",
+        "location": "asdf",
+        "date": "2021-03-22",
+        "id": 12
+      }
   ],
   "friends": [
     {
-      "id": 1,
-      "currentUserId": 2,
-      "friendId": 1
+        "id": 1,
+        "currentUserId": 2,
+        "userId": 1
     },
     {
-      "id": 2,
-      "currentUserId": 1,
-      "friendId": 2
+        "id": 2,
+        "currentUserId": 1,
+        "userId": 2
+    },
+    {
+        "id": 3,
+        "currentUserId": 1,
+        "userId": 3
+    },
+    {
+        "id": 4,
+        "currentUserId": 1,
+        "userId": 4
+    },
+    {
+        "id": 5,
+        "currentUserId": 2,
+        "userId": 5
     }
   ]
 }
