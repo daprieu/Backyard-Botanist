@@ -14,7 +14,8 @@ const styles = {
     
 export const SearchPlantCard = ({plant}) => (
     <Card className="m-2" style={{ width: '18rem', borderRadius: 25 }}>
-    <Card.Img variant="top" src={plant.image_url} style={styles.cardImage}/>
+    { plant.image_url ? <Card.Img variant="top" src={plant.image_url} style={styles.cardImage}/>
+    : <Card.Img variant="top" src={"./goot.jpg"} style={styles.cardImage}/>}
     <Card.Body >
     <Card.Text>{ plant.scientific_name }</Card.Text>
     <Card.Text>{ plant.common_name }</Card.Text>
