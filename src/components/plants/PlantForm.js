@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router";
 import { SearchPlantsContext } from "../searchPlants/SearchPlantsProvider";
-import { PlantContext, PlantProvider } from "./PlantsProvider";
+import { PlantContext } from "./PlantsProvider";
 
 
 export const PlantForm = () => {

@@ -23,14 +23,12 @@ export const FriendCard = ({ friend }) => {
         //     <div>{plant.scientificName}</div>
 
         // </section>
-    <Card style={{ width: '14rem', borderRadius: 25}}>
-        {/* <Card.Img variant="top" src={plant.image} style={styles.cardImage} /> */}
-        <Card.Body>
+    <Card  className="m-1" style={{ width: '20rem', borderRadius: 25}}>
+        
+        <Card.Body className="d-flex flex-row justify-content-around">
         <Card.Title>{friend.user.name} </Card.Title> 
-          {/* <Card.Title>{plant.scientificName}</Card.Title>
-          <Card.Text>{ plant.commonName }</Card.Text> */}
-          <Link to={`/friends/friendplants/${friend.id}`}><Button variant="success">
-              View Plants</Button></Link>
+        <Link to={`/friends/friendplants/${friend.userId}`}>
+            <Button variant="success">View Plants</Button></Link>
         </Card.Body>
       </Card>
 
