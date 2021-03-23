@@ -102,7 +102,7 @@ export const PlantForm = () => {
             <input type="text" id="commonName" onChange={handleControlledInputChange} required autoFocus className="form-control"
             value={treflePlant.common_name}
             />}
-            {/* readOnly={treflePlant.common_name} */}
+            
         </div>
         </fieldset>
         <fieldset>
@@ -114,7 +114,7 @@ export const PlantForm = () => {
             
             value={treflePlant.scientific_name}
             />}
-            {/* readOnly={treflePlant.scientific_name} */}
+            
         </div>
         </fieldset>
         <fieldset>

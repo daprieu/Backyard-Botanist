@@ -1,7 +1,8 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { FriendList } from "./friends/FriendList"
 
-import { FriendPlantList } from "./friends/FriendPlantList"
+
 import { FriendProvider } from "./friends/FriendProvider"
 import { PlantForm } from "./plants/PlantForm"
 import { PlantList } from "./plants/PlantList"
@@ -40,8 +41,8 @@ export const AppViews = () => {
         
         
         <FriendProvider>
-            <Route exact path="/friendsPlants">
-                <FriendPlantList />
+            <Route exact path="/friends">
+                <FriendList />
             </Route>
         </FriendProvider>
         </SearchPlantsProvider>

@@ -4,7 +4,7 @@ import { Route, Redirect } from "react-router-dom"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { userStorageKey } from "./auth/authSettings"
-import { UserProvider } from "./users/UserProvider"
+
 import { NavBar } from "./nav/NavBar"
 import { AppViews } from "./AppViews"
 import { Logout } from "./auth/LogOut"
