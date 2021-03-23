@@ -5,10 +5,10 @@ import { PlantContext, PlantProvider } from "./PlantsProvider";
 
 
 export const PlantForm = () => {
-        const { addAPlant, getPlants, updatePlant, getPlantsById } = useContext(PlantContext)
+        const { addAPlant, updatePlant, getPlantsById } = useContext(PlantContext)
         const {treflePlant, getSPlantsById } = useContext(SearchPlantsContext)
-        // const [ ] = useState({})
-        console.log('treflePlant: ', treflePlant);
+        
+        // console.log('treflePlant: ', treflePlant);
 
         const [plant, setPlant] = useState({
             userId: parseInt(sessionStorage.getItem("app_user_id")),
@@ -21,19 +21,16 @@ export const PlantForm = () => {
             location: "",
             date: ""
         })
-        console.log('plant: ', plant);
+        // console.log('plant: ', plant);
         
         
         const { trefleId, plantId } = useParams()
-        console.log('plantId: ', plantId);
-        console.log('trefleId: ', trefleId);
+        // console.log('plantId: ', plantId);
+        // console.log('trefleId: ', trefleId);
         
         const history = useHistory()
 
-        // useEffect(() => {
-        //     getSPlantsById(trefleId)
-            
-        // }, [])
+        
         const handleControlledInputChange = (event) => {
             /* When changing a state object or array,
             always create a copy, make changes, and then set state.*/
@@ -92,7 +89,8 @@ export const PlantForm = () => {
 
 
     return(
-        <form className="plantForm">
+        <section className="d-flex justify-content-center  p-3">
+        <form className="plantForm p-3 mb-6 bg-dark text-white rounded" style={{ width: '45rem'}}>
             <h2 className="plantForm__title">{plantId ? "Edit Plant" : "AddPlant"}</h2>
              {plantId ? <img src={plant.image} height={400} alt="new"/> :
              <img src={treflePlant.image_url} height={400} alt="new"/>}
@@ -161,5 +159,6 @@ export const PlantForm = () => {
         {plantId ? "Save" : "AddPlant"}
         </button>
     </form>
+    </section>
     )
 }

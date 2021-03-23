@@ -1,109 +1,37 @@
 {
   "users": [
     {
-        "id": 1,
-        "name": "Alex Prieu",
-        "email": "aprieu@bb.com"
+      "id": 1,
+      "name": "Alex Prieu",
+      "email": "aprieu@bb.com"
     },
-    {
-        "id": 2,
-        "name": "Professor Oak",
-        "email": "Oak@bb.com"
-    },
-    {
-        "id": 3,
-        "name": "Professor Birch",
-        "email": "Birch@bb.com"
-    },
-    {
-        "id": 4,
-        "name": "Professor Elm",
-        "email": "Elm@bb.com"
-    },
-    {
-        "id": 5,
-        "name": "Professor Juniper",
-        "email": "Juniper@bb.com"
-    },
-    {
-        "id": 6,
-        "name": "Professor Magnolia",
-        "email": "Magnolia@bb.com"
-    }
-  ],
-  "plants": [
     {
       "id": 2,
-      "userId": 1,
-      "image": "https://bs.plantnet.org/image/o/22a17172aa9f74e9003de00a1e3aa532064ccfe7",
-      "commonName": "corn brome",
-      "scientificName": "Bromus squarrosus",
-      "type": "fff",
-      "fruit": "ffffffffffff",
-      "flower": "ff",
-      "location": "fff",
-      "date": ""
+      "name": "Professor Oak",
+      "email": "Oak@bb.com"
     },
     {
       "id": 3,
-      "userId": 1,
-      "image": "https://bs.plantnet.org/image/o/3ce9fcc4fd1562e49722ec3786ad88e80f25fb27",
-      "commonName": null,
-      "scientificName": "Schefflera delavayi",
-      "type": "treee",
-      "fruit": "na",
-      "flower": "na",
-      "location": "lowes",
-      "date": "2021-03-19"
+      "name": "Professor Birch",
+      "email": "Birch@bb.com"
     },
     {
       "id": 4,
-      "userId": 1,
-      "image": "https://bs.floristic.org/image/o/d2747c12a135a00ff8e6d8af86acbec3c6f8248d",
-      "commonName": "Acer pseudoplatanu",
-      "scientificName": "Acer pseudoplatanus",
-      "type": "tree",
-      "fruit": "samara",
-      "flower": "aa",
-      "location": "",
-      "date": ""
+      "name": "Professor Elm",
+      "email": "Elm@bb.com"
     },
     {
-      "userId": 1,
-      "image": "https://bs.plantnet.org/image/o/810dbe6e4fdb7204d2617f5af19460482194e12e",
-      "commonName": "Japanese tree lilac",
-      "scientificName": "Syringa reticulata",
-      "type": "",
-      "fruit": "",
-      "flower": "",
-      "location": "",
-      "date": "",
-      "id": 6
+      "id": 5,
+      "name": "Professor Juniper",
+      "email": "Juniper@bb.com"
     },
     {
-      "userId": 1,
-      "image": "https://bs.plantnet.org/image/o/1206af005f5a2ef058fd1faa777e8cb072ba68ca",
-      "commonName": "Portia tree",
-      "scientificName": "Thespesia populnea",
-      "type": "",
-      "fruit": "",
-      "flower": "",
-      "location": "",
-      "date": "",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "image": "https://bs.plantnet.org/image/o/15fb653fe1ab6d7010c3e29335aa087e6ab49d9c",
-      "commonName": "strawberry tree",
-      "scientificName": "Arbutus unedo",
-      "type": "",
-      "fruit": "",
-      "flower": "",
-      "location": "",
-      "date": "",
-      "id": 8
-    },
+      "id": 6,
+      "name": "Professor Magnolia",
+      "email": "Magnolia@bb.com"
+    }
+  ],
+  "plants": [
     {
       "userId": 4,
       "image": "https://bs.plantnet.org/image/o/f01ce76acc1d8a86fc1a661b4234cc5d8aa506e8",
@@ -129,55 +57,91 @@
       "id": 10
     },
     {
-        "userId": 2,
-        "image": "https://bs.plantnet.org/image/o/f01ce76acc1d8a86fc1a661b4234cc5d8aa506e8",
-        "commonName": "velvet tree",
-        "scientificName": "Miconia calvescens",
-        "type": "",
-        "fruit": "",
-        "flower": "",
-        "location": "",
-        "date": "",
-        "id": 11
-      },
-      {
-        "userId": 2,
-        "image": "https://bs.plantnet.org/image/o/da8b55376ebd33df2d86e751fc26f73f2c27bbeb",
-        "commonName": "Apple Bush",
-        "scientificName": "Pterocaulon sphacelatum",
-        "type": "bush",
-        "fruit": "N/A",
-        "flower": "aasdf",
-        "location": "asdf",
-        "date": "2021-03-22",
-        "id": 12
-      }
+      "userId": 2,
+      "image": "https://bs.plantnet.org/image/o/f01ce76acc1d8a86fc1a661b4234cc5d8aa506e8",
+      "commonName": "velvet tree",
+      "scientificName": "Miconia calvescens",
+      "type": "",
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": "",
+      "id": 11
+    },
+    {
+      "userId": 2,
+      "image": "https://bs.plantnet.org/image/o/da8b55376ebd33df2d86e751fc26f73f2c27bbeb",
+      "commonName": "Apple Bush",
+      "scientificName": "Pterocaulon sphacelatum",
+      "type": "bush",
+      "fruit": "N/A",
+      "flower": "aasdf",
+      "location": "asdf",
+      "date": "2021-03-22",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.floristic.org/image/o/11030e9a9217303139cb037fbd7616c5342c681f",
+      "commonName": "Japanese maple",
+      "scientificName": "Acer palmatum",
+      "type": "Tree",
+      "fruit": "samara",
+      "flower": "N/A",
+      "location": "My backyard",
+      "date": "2021-03-23",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/22ff65e59005fb518d529602ae42e9ea2e191b33",
+      "commonName": "banana",
+      "scientificName": "Musa balbisiana",
+      "type": "Tropical Plant",
+      "fruit": "N/A",
+      "flower": "N/A",
+      "location": "My backyard",
+      "date": "2021-03-23",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/1a6930b5be1d5cd82a9b8c320292bcb59b6348ac",
+      "commonName": "passionflower",
+      "scientificName": "Passiflora alata",
+      "type": "vine",
+      "fruit": "green pom",
+      "flower": "purple flower",
+      "location": "zoo",
+      "date": "2021-03-23",
+      "id": 15
+    }
   ],
   "friends": [
     {
-        "id": 1,
-        "currentUserId": 2,
-        "userId": 1
+      "id": 1,
+      "currentUserId": 2,
+      "userId": 1
     },
     {
-        "id": 2,
-        "currentUserId": 1,
-        "userId": 2
+      "id": 2,
+      "currentUserId": 1,
+      "userId": 2
     },
     {
-        "id": 3,
-        "currentUserId": 1,
-        "userId": 3
+      "id": 3,
+      "currentUserId": 1,
+      "userId": 3
     },
     {
-        "id": 4,
-        "currentUserId": 1,
-        "userId": 4
+      "id": 4,
+      "currentUserId": 1,
+      "userId": 4
     },
     {
-        "id": 5,
-        "currentUserId": 2,
-        "userId": 5
+      "id": 5,
+      "currentUserId": 2,
+      "userId": 5
     }
   ]
 }
