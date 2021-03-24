@@ -50,7 +50,7 @@ export const PlantNote = () => {
         <Container className="d-flex justify-content-center flex-wrap p-2 col-example ">
         <Row>
         <Col>
-        <Card style={{ width: '40rem', borderRadius: '1rem' }}>
+        <Card className="shadow p-3 mb-5 bg-body rounded" style={{ width: '40rem'}}>
         <Card.Img variant="top" src={plants.image} style={styles.cardImage}/>
         <Card.Body>
           <Card.Title>{plants.scientificName}</Card.Title>

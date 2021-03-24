@@ -13,7 +13,7 @@ const styles = {
 
     
 export const SearchPlantCard = ({plant}) => (
-    <Card className="m-2" style={{ width: '18rem', borderRadius: 25 }}>
+    <Card className="m-2 shadow p-1 bg-body" style={{ width: '18rem', borderRadius: 25 }}>
     { plant.image_url ? <Card.Img variant="top" src={plant.image_url} style={styles.cardImage}/>
     : <Card.Img variant="top" src={"./goot.jpg"} style={styles.cardImage}/>}
     <Card.Body >

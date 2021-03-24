@@ -17,7 +17,7 @@ export const PlantCard = ({ plant }) => {
     return (
         
         
-        <Card className="m-1" style={{ width: '14rem', borderRadius: 25}}>
+        <Card className="m-1 shadow p-1 bg-body" style={{ width: '14rem', borderRadius: 25}}>
         <Card.Img variant="top" src={plant.image} style={styles.cardImage} />
         <Card.Body>
           <Card.Title>{plant.scientificName}</Card.Title>
