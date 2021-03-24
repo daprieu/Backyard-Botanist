@@ -23,9 +23,15 @@ export const PlantList = () => {
 //   that cannot be handled during render. In this case, it is the API call for the plants.
 // Use the .map() array method to iterate the array of plants and 
 // generate HTML for each one by invoking the PlantCard component function.
+const styles = {
+    plantList: {
+        color: "#000"
+      }
+    }
+
 return (
     <>
-        <h3>{currentUser}'s Plants</h3>
+        <h3 style={styles.plantList} >{currentUser}'s Plants</h3>
         <section  className="container">
             
         <div className="d-flex justify-content-center flex-wrap p-2 col-example">

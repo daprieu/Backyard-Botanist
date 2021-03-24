@@ -66,9 +66,14 @@ export const Login = () => {
                 </form>
             </section>
             <section className="link--register">
-                <Link to="/register">Register for an account</Link>
+                <Link style={styles.registerLink} to="/register">Register for an account</Link>
             </section>
         </main>
     )
 }
+const styles = {
+    registerLink: {
+        color: "#131169"
+      }
+    }
 

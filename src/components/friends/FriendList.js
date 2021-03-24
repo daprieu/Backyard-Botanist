@@ -5,7 +5,7 @@ import { FriendCard } from './FriendCard'
 export const FriendList = () => {
 
 const { friends, getFriends } = useContext(FriendContext)
-console.log('friends: ', friends);
+// console.log('friends: ', friends);
 
 useEffect(() => {
     getFriends()

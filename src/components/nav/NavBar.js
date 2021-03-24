@@ -5,8 +5,18 @@ import { Link } from "react-router-dom"
 
 export const NavBar = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand>Backyard Botanist</Navbar.Brand>
+        <Navbar expand="lg" bg="dark" variant="dark">
+        
+        <Navbar.Brand>
+        <img
+        src="./Backyard Botanist Logo.png"
+        width="28"
+        height="32"
+        className="d-inline-block align-top"
+        alt="Backyard Botanist logo"
+        />{" "}
+        Backyard Botanist
+        </Navbar.Brand>
         <Nav className="mr-auto">
             <Link className="nav-link" to="/myplants">My Plants</Link>
             <Link className="nav-link" to="/search">Search</Link>
