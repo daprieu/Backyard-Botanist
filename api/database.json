@@ -336,6 +336,18 @@
       "location": "Nashville",
       "date": "2021-03-24",
       "id": 34
+    },
+    {
+      "userId": 7,
+      "image": "https://bs.plantnet.org/image/o/33e08f74ed28546c4eba5fbdab5a35fb9ff24eeb",
+      "commonName": "Tall ironweed",
+      "scientificName": "Vernonanthura nudiflora",
+      "type": "flowering plant",
+      "fruit": "N/A",
+      "flower": "violet",
+      "location": "place I peed yesterday",
+      "date": "2021-03-23",
+      "id": 35
     }
   ],
   "friends": [
@@ -383,6 +395,16 @@
       "userId": 5,
       "currentUserId": 1,
       "id": 9
+    },
+    {
+      "userId": 1,
+      "currentUserId": 7,
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "currentUserId": 7,
+      "id": 11
     }
   ]
 }
