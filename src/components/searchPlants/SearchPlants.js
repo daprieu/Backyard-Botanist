@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { SearchPlantsContext } from "./SearchPlantsProvider"
-import { Button, FormControl, InputGroup } from "react-bootstrap"
+
 
 export const PlantSearch = () => {
     const { setSearchTerms } = useContext(SearchPlantsContext)
@@ -9,19 +9,11 @@ export const PlantSearch = () => {
 //setSearchTerms grabs the data on keyup and updates the searchterms
     return (
     <>
-    {/* <InputGroup className="mb-3">
-    <FormControl
-      placeholder="Search for a plant"
-      
-    />
-    <InputGroup.Append>
-      <Button variant="success" onClick={(event) => setSearchTerms()}>search</Button>
-    </InputGroup.Append>
-  </InputGroup> */}
+    
         Plant search:
         <input type="text"
           className="input--wide"
-          onKeyUp={(event) => setSearchTerms(event.target.value)}
+          onKeyUp={(event) => setSearchTerms(event.target.value.toUpperCase())}
           placeholder="Search for an plant... " />
     </>
     )
