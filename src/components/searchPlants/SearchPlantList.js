@@ -5,6 +5,7 @@ import { SearchPlantsContext } from "./SearchPlantsProvider"
 export const SearchablePlantList = () => {
 
     const {searchablePlants, getSearchablePlants, searchTerms} = useContext(SearchPlantsContext)
+    console.log('searchablePlants: ', searchablePlants);
     // console.log('searchTerms: ', searchTerms);
 
     const [filteredPlants, setFiltered] = useState([])
@@ -13,26 +14,20 @@ export const SearchablePlantList = () => {
 
     // the first useEffect takes the fetchcall function and passes the searchterms from the 
     // search bar to it
-    useEffect(() => {
-        
-        if (searchTerms !== "") {
-        getSearchablePlants(searchTerms)
-    }
-    }, [searchTerms])
-
-    // the second useEffect takes the searchablePlants that has been updated by the getSearchablePlants
-    //and sets the filteredPlants array with the new information
+    //then searchablePlants that has been updated by the getSearchablePlants
+    //sets the filteredPlants array with the new information
     // when there are no search terms available the filteredPlants is just set 
     // to and empty array
     useEffect(() => {
+        
         if (searchTerms !== "") {
-            const results = searchablePlants
-            
-            setFiltered(results)
+            getSearchablePlants(searchTerms)
+            .then(setFiltered(searchablePlants))
         } else {
             setFiltered([])
         }
-    }, [searchTerms, searchablePlants])
+        }, [searchTerms])
+
 
     return (
         <>

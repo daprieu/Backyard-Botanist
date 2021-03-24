@@ -20,7 +20,7 @@ export const FriendPlantCard = ({ plant }) => {
         
     <Card className="m-2" style={{ width: '45rem', borderRadius: 25}}>
         <Card.Body>
-        {/* <Card.Title>{plant.name}'s </Card.Title>  */}
+        
         <Card.Img variant="top" src={plant.image} style={styles.cardImage} />
           <Card.Title>{plant.scientificName}</Card.Title>
           <Card.Text>{ plant.commonName }</Card.Text>

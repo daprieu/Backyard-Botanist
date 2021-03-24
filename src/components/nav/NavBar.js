@@ -3,7 +3,7 @@ import { Nav, Navbar } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 
-export const NavBar = (props) => {
+export const NavBar = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand>Backyard Botanist</Navbar.Brand>

@@ -18,19 +18,18 @@ export const PlantList = () => {
         
         getPlants()
     }, [])
-//   The useEffect hook allows the component to reach out into the world for anything 
+    // debugger
+    //   The useEffect hook allows the component to reach out into the world for anything 
 //   that cannot be handled during render. In this case, it is the API call for the plants.
-
-    // Use the .map() array method to iterate the array of plants and 
-    // generate HTML for each one by invoking the PlantCard component function.
-    return (
-        <>
+// Use the .map() array method to iterate the array of plants and 
+// generate HTML for each one by invoking the PlantCard component function.
+return (
+    <>
         <h3>{currentUser}'s Plants</h3>
         <section  className="container">
             
         <div className="d-flex justify-content-center flex-wrap p-2 col-example">
             
-            {/* {console.log("friends list render", friends)} */}
             {   
                 plants.map(plant => {
                     return <PlantCard key={plant.id} plant={plant} />
