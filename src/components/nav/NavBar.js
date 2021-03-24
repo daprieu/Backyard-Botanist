@@ -9,7 +9,7 @@ export const NavBar = () => {
         
         <Navbar.Brand>
         <img
-        src="./Backyard Botanist Logo.png"
+        src="./BackyardBotanistLogo.png"
         width="28"
         height="32"
         className="d-inline-block align-top"

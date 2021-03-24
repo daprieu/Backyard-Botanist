@@ -24,11 +24,12 @@ const history = useHistory()
 
 return (
     <>
-     <h3>You are viewing {friendPlants.name}'s plants</h3> 
-     <Button onClick={() => {
+     <Button className="m-4" onClick={() => {
             history.push(`/friends`)
             }}>Back to friend list</Button>
-            
+    <section  className="d-flex justify-content-center pt-1">
+     <h3>You are viewing {friendPlants.name}'s plants</h3> 
+    </section>
      <section  className="d-flex  justify-content-center">     
      <div className="d-flex flex-column  justify-content-center p-2">
        {  

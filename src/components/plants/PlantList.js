@@ -31,8 +31,8 @@ const styles = {
 
 return (
     <>
-        <h3 style={styles.plantList} >{currentUser}'s Plants</h3>
         <section  className="container">
+        <h3 className="pt-3" style={styles.plantList} >{currentUser}'s Plants</h3>
             
         <div className="d-flex justify-content-center flex-wrap p-2 col-example ">
             

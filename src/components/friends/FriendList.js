@@ -13,10 +13,11 @@ useEffect(() => {
 
 return (
     <>
-    <h3>Your friends list</h3>
-    <section  className="d-flex justify-content-center">
+    <section  className="d-flex flex-cloumn justify-content-center">
+    <h3 className="p-3">Your friends list:</h3>
+    
 
-    <div className="d-flex flex-column justify-content-center p-2">
+    <div className="d-flex flex-column justify-content-center p-2 col-example">
 
         {   
             friends.map(friend => {

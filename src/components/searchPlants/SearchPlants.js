@@ -9,12 +9,13 @@ export const PlantSearch = () => {
 //setSearchTerms grabs the data on keyup and updates the searchterms
     return (
     <>
-    
-        Plant search:
+        <div className="d-flex justify-content-center flex-wrap pl-5 pt-2 col-example ">
+        <h4>Search for a plant:</h4>
+        
         <input type="text"
           className="input--wide"
-          onKeyUp={(event) => setSearchTerms(event.target.value.toUpperCase())}
-          placeholder="Search for an plant... " />
+          onKeyDown={(event) => setSearchTerms(event.target.value.toUpperCase())}
+          placeholder="Search for an plant... " /></div>
     </>
     )
   }

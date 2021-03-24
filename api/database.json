@@ -29,6 +29,11 @@
       "id": 6,
       "name": "Professor Magnolia",
       "email": "Magnolia@bb.com"
+    },
+    {
+      "email": "wiley@BB.com",
+      "name": "wiley prieu",
+      "id": 7
     }
   ],
   "plants": [
@@ -79,18 +84,6 @@
       "flower": "white",
       "location": "Nashville",
       "date": "2021-03-22"
-    },
-    {
-      "id": 13,
-      "userId": 1,
-      "image": "https://bs.floristic.org/image/o/11030e9a9217303139cb037fbd7616c5342c681f",
-      "commonName": "Japanese maple",
-      "scientificName": "Acer palmatum",
-      "type": "Tree",
-      "fruit": "samara",
-      "flower": "N/A",
-      "location": "My backyard",
-      "date": "2021-03-23"
     },
     {
       "userId": 1,
@@ -331,6 +324,18 @@
       "location": "Nashville",
       "date": "2021-03-24",
       "id": 33
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/31cd6cef60eade4d8f4846516fd0fee6770526db",
+      "commonName": "black sage",
+      "scientificName": "Salvia mellifera",
+      "type": "tree",
+      "fruit": "N/A",
+      "flower": "N/A",
+      "location": "Nashville",
+      "date": "2021-03-24",
+      "id": 34
     }
   ],
   "friends": [
