@@ -1,5 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { FriendFinder } from "./friends/FriendFinder"
 import { FriendList } from "./friends/FriendList"
 import { FriendPlantList } from "./friends/FriendPlantList"
 import { FriendProvider } from "./friends/FriendProvider"
@@ -10,6 +11,8 @@ import { PlantProvider } from "./plants/PlantsProvider"
 import { SearchablePlantList } from "./searchPlants/SearchPlantList"
 import { PlantSearch } from "./searchPlants/SearchPlants"
 import { SearchPlantsProvider } from "./searchPlants/SearchPlantsProvider"
+import { UserList } from "./users/UserList"
+import { UserProvider } from "./users/UserProvider"
 
 
 
@@ -49,7 +52,12 @@ export const AppViews = () => {
             <Route exact path="/friends/friendplants/:friendId(\d+)">
                 <FriendPlantList />
             </Route>
-
+        <UserProvider>
+            <Route exact path="/friends/search">
+                <FriendFinder />
+                <UserList />
+            </Route>
+        </UserProvider>
         </FriendProvider>
         </SearchPlantsProvider>
         </PlantProvider>
