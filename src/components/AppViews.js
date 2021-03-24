@@ -31,7 +31,7 @@ export const AppViews = () => {
             </Route>
 
             <Route exact path="/search">
-                <PlantSearch />
+                {/* <PlantSearch /> */}
                 <SearchablePlantList />
             </Route>
 

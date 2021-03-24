@@ -1,5 +1,5 @@
 import React from "react"
-import { Nav, Navbar } from "react-bootstrap"
+import { Nav, Navbar, Image } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 
@@ -8,7 +8,7 @@ export const NavBar = () => {
         <Navbar expand="lg" bg="dark" variant="dark">
         
         <Navbar.Brand>
-        <img
+        <Image
         src="./BackyardBotanistLogo.png"
         width="28"
         height="32"

@@ -12,20 +12,23 @@ export const UserCard = ({ user, friends }) => {
     // console.log('user: ', user);
     const {addFriend} = useContext(FriendContext)
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+    // console.log('currentUser: ', currentUser);
 
 
     
+    
     const filterFriends = friends.filter(userfriend => userfriend.userId === user.id)
-    console.log('filterFriends: ', filterFriends);
+    
+    // console.log('filterFriends: ', filterFriends);
     let showButton = true
     if (filterFriends.length > 0) {
-        user.name = ""
+        user.name = []
         showButton = false
         
     }
     //if array of filtered friends is greater than 0 then leave whatever returned filtered search as blank.
     if (user.id === currentUser) {
-        user.name = ""
+        user.name = []
         showButton = false
     } 
     const history = useHistory()
@@ -45,15 +48,17 @@ export const UserCard = ({ user, friends }) => {
     // array of friends as an object with the defined key variables above.
     
     return (
-    
-<Card  className="m-1" style={{ width: '20rem', borderRadius: 25}}>
+    <>
+{user.name.length ? 
+<Card  className="m-1 d-flex flex-row justify-content-around" style={{ width: '20rem', borderRadius: 25}}>
+    <Card.Body className="d-flex flex-row justify-content-around">
+    <Card.Title>{user.name} </Card.Title> 
+    </Card.Body>
         
-        { showButton === false ? '' :<Card.Body className="d-flex flex-row justify-content-around">
-    { showButton === false ? '' :<Card.Title>{user.name} </Card.Title> 
-    }{ showButton === false ? '' :<Link to={`/friends/friendplants/${friends.userId}`}>
-    <Button id={user.id}  onClick={handleSaveFriend} variant="success">Add Friend</Button></Link>}
-    
-    </Card.Body>}
-  </Card> 
-
+    <Card.Body className="d-flex flex-row justify-content-around">
+    <Link to={`/friends/friendplants/${friends.userId}`}>
+    <Button id={user.id}  onClick={handleSaveFriend} variant="success">Add Friend</Button></Link>
+    </Card.Body>
+  </Card> : <></> }
+</>
 )}
