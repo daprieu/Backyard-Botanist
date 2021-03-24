@@ -9,7 +9,7 @@ export const PlantList = () => {
     // console.log('currentUser: ', currentUser);
 
     const { plants, getPlants } = useContext(PlantContext)
-    console.log('userPlants: ', plants);
+    // console.log('userPlants: ', plants);
     //import the context object created in the provider component so that 
     // the Context hook can access the objects it exposes.
     // This state changes when `getPlants()` is invoked below
