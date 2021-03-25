@@ -92,8 +92,12 @@ export const PlantForm = () => {
         <section className="d-flex justify-content-center  p-3">
         <form className="plantForm p-3 mb-6 bg-dark text-white rounded" style={{ width: '45rem'}}>
             <h2 className="plantForm__title">{plantId ? "Edit Plant" : "AddPlant"}</h2>
-             {plantId ? <img src={plant.image} height={400} alt="new"/> :
-             <img src={treflePlant.image_url} height={400} alt="new"/>}
+             {
+             plantId ? <img src={plant.image} height={400} alt="new"/> : 
+             trefleId ? <img src={treflePlant.image_url} height={400} alt="new"/> : 
+             <img src="./goot.jpg" height={400} alt="new"/> 
+             }
+             
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantName">Plant Name: </label>
