@@ -25,11 +25,27 @@ export const FriendProvider = (props) => {
         .then(res => res.json())
         .then(setFriendPlants)
     }
+    const addFriend = friendObj => {
+        return fetch("http://localhost:8088/friends", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(friendObj)
+        })
+        .then(getFriends)
+    }
+    const deleteFriend = friendId => {
+        return fetch(`http://localhost:8088/friends/${friendId}`, {
+            method: "DELETE"
+        })
+        .then(getFriends)
+    }
 
     return (
         <FriendContext.Provider value={{
-            friends, getFriends, friendPlants, getPlantsByFriendId
-            
+            friends, getFriends, friendPlants, getPlantsByFriendId, addFriend,
+            deleteFriend
         }}>
             {props.children}
         </FriendContext.Provider>

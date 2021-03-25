@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from "react"
 import { FriendContext } from "./FriendProvider"
 import { FriendCard } from './FriendCard'
+import { Link } from 'react-router-dom'
+import { Button } from "react-bootstrap"
 
 export const FriendList = () => {
 
@@ -13,6 +15,7 @@ useEffect(() => {
 
 return (
     <>
+    
     <section  className="d-flex flex-cloumn justify-content-center">
     <h3 className="p-3">Your friends list:</h3>
     
@@ -25,6 +28,10 @@ return (
             })
         }
     </div>
+    <h3 className="p-3">Or:</h3>
+        <Link className="pt-3" to={`/friends/search`}>
+        <Button>Add a Friend</Button>
+        </Link>
     </section>
     </>
 )}

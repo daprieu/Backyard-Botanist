@@ -20,12 +20,18 @@ export const SearchPlantsProvider = (props) => {
         .then(res => res.json())
         .then(data => setTreflePlant(data.data))
     }
-
+    const getPlantsbyFLowerColor = (flowerColor) => {
+        return fetch(`https://powerful-plateau-15272.herokuapp.com/https://trefle.io/api/v1/species?filter%5Bflower_color%5D=${flowerColor}&token=${trefleAPI.apiKey}`)
+        .then(res => res.json())
+        .then(data => setSearchablePlants(data.data))
+    }
     return (
         <SearchPlantsContext.Provider value={{
-            searchablePlants, setSearchablePlants, searchTerms, setSearchTerms, getSearchablePlants, getSPlantsById, treflePlant
+            searchablePlants, setSearchablePlants, searchTerms, setSearchTerms, getSearchablePlants, 
+            getSPlantsById, treflePlant, getPlantsbyFLowerColor
         }}>
             {props.children}
         </SearchPlantsContext.Provider>
     )
 }
+// https://trefle.io/api/v1/species?filter%5Bflower_color%5D=blue&token=
