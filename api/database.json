@@ -339,27 +339,15 @@
     },
     {
       "userId": 7,
-      "image": "https://bs.plantnet.org/image/o/33e08f74ed28546c4eba5fbdab5a35fb9ff24eeb",
-      "commonName": "Tall ironweed",
-      "scientificName": "Vernonanthura nudiflora",
-      "type": "flowering plant",
-      "fruit": "N/A",
-      "flower": "violet",
-      "location": "place I peed yesterday",
-      "date": "2021-03-23",
-      "id": 35
-    },
-    {
-      "userId": 7,
-      "image": null,
-      "commonName": "ironweed",
-      "scientificName": "Vernonia galamensis",
+      "image": "https://bs.plantnet.org/image/o/22ff65e59005fb518d529602ae42e9ea2e191b33",
+      "commonName": "banana",
+      "scientificName": "Musa balbisiana",
       "type": "",
       "fruit": "",
       "flower": "",
       "location": "",
       "date": "",
-      "id": 36
+      "id": 35
     }
   ],
   "friends": [
@@ -421,36 +409,36 @@
   ],
   "flowerColors": [
     {
-        "id": 1,
-        "color": "Red"
+      "id": 1,
+      "color": "Red"
     },
     {
-        "id": 2,
-        "color": "Orange"
+      "id": 2,
+      "color": "Orange"
     },
     {
-        "id": 3,
-        "color": "Yellow"
+      "id": 3,
+      "color": "Yellow"
     },
     {
-        "id": 4,
-        "color": "Green"
+      "id": 4,
+      "color": "Green"
     },
     {
-        "id": 5,
-        "color": "Blue"
+      "id": 5,
+      "color": "Blue"
     },
     {
-        "id": 6,
-        "color": "Purple"
+      "id": 6,
+      "color": "Purple"
     },
     {
-        "id": 7,
-        "color": "Black"
+      "id": 7,
+      "color": "Black"
     },
     {
-        "id": 8,
-        "color": "White"
+      "id": 8,
+      "color": "White"
     }
   ]
 }

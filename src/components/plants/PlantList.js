@@ -1,4 +1,6 @@
 import React, { useContext, useEffect } from "react"
+import { Button } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import { PlantCard } from "./PlantCard"
 import { PlantContext } from "./PlantsProvider"
 
@@ -28,12 +30,11 @@ const styles = {
         color: "#000"
       }
     }
-
+// {currentUser}'s
 return (
     <>
-        <section  className="container">
-        <h3 className="pt-3" style={styles.plantList} >{currentUser}'s Plants</h3>
-            
+        <section  className="container align-middle">
+        <h3 className="pt-3" style={styles.plantList} >Viewing your plants</h3>
         <div className="d-flex justify-content-center flex-wrap p-2 col-example ">
             
             {   
@@ -42,6 +43,9 @@ return (
                 })
             }
         </div>
+        {plants.length === 0 ? <><h4 style={styles.plantList} className="align-middle">It does not look like you have any plants saved.</h4>
+        <Button variant="primary"><Link style={styles.plantList} className="nav-link" to="/search">Search for plants</Link></Button></>: ""}
+
         </section>
             
         </>
