@@ -62,6 +62,7 @@
       "date": "2021-03-22"
     },
     {
+      "id": 14,
       "userId": 1,
       "image": "https://bs.plantnet.org/image/o/22ff65e59005fb518d529602ae42e9ea2e191b33",
       "commonName": "banana",
@@ -70,8 +71,7 @@
       "fruit": "N/A",
       "flower": "N/A",
       "location": "My backyard",
-      "date": "2021-03-23",
-      "id": 14
+      "date": "2021-03-23"
     },
     {
       "userId": 1,
@@ -336,6 +336,42 @@
       "flower": "",
       "location": "",
       "date": ""
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/fe957b1a87df808443782ad72c2c0ddec0729370",
+      "commonName": "Rugosa rose",
+      "scientificName": "Rosa rugosa",
+      "type": "Subshrub",
+      "fruit": "asdf",
+      "flower": "",
+      "location": "in a park",
+      "date": "2021-03-26",
+      "id": 41
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/b975bbd67f037c4784c6b14f5e3ad86caebd6b1f",
+      "commonName": "Castorbean",
+      "scientificName": "Ricinus communis",
+      "type": "Tree, Shrub, Subshrub, Forb/herb",
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": "",
+      "id": 42
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/8a5a9fed6cdcf07097e8f8cbe71f154dfba074ce",
+      "commonName": "Herb bennet",
+      "scientificName": "Geum urbanum",
+      "type": "Forb/herb",
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": "",
+      "id": 43
     }
   ],
   "friends": [

@@ -9,7 +9,7 @@ export const SearchablePlantList = () => {
 
 let intInputV
     const [filteredPlants, setFiltered] = useState([])
-    console.log('filteredPlants: ', filteredPlants);
+    // console.log('filteredPlants: ', filteredPlants);
     
     
     // the first useEffect takes the fetchcall function and passes the searchterms from the 
@@ -21,13 +21,13 @@ let intInputV
     
     const { searchTerms, setSearchTerms, searchablePlants, getSearchablePlants, getPlantsbyFlowerColor } = useContext(SearchPlantsContext)
     // console.log('searchablePlants: ', searchablePlants);
-    console.log('searchTerms: ', searchTerms);
+    // console.log('searchTerms: ', searchTerms);
     const { colors, getFlowerColors } = useContext(FlowerColorContext)
-    console.log('colors: ', colors);
+    // console.log('colors: ', colors);
     // const [filteredPlants, setFiltered] = useState([])
     const handleInputChange = (event) => {
         const plantTerms = event.target.value
-        console.log('plantTerms: ', plantTerms);
+        // console.log('plantTerms: ', plantTerms);
         setSearchTerms(plantTerms)
     }
     

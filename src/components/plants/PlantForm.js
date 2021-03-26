@@ -97,7 +97,7 @@ export const PlantForm = () => {
              trefleId ? <img src={treflePlant.image_url} height={400} alt="new"/> : 
               <img src="./goot.jpg" height={400} alt="new"/> 
              }
-             <p className="pl-2"><h3>Native Distributions:</h3>{treflePlant.distribution?.native.join(", ")}</p>
+             {plantId ? "" : <p className="pl-2"><h3>Native Distributions:</h3>{treflePlant.distribution?.native.join(", ")}</p>}
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantName">Plant Name: </label>
