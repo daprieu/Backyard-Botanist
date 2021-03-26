@@ -7,8 +7,7 @@ import { PlantContext } from "./PlantsProvider"
 
 export const PlantList = () => {
 
-    const currentUser = sessionStorage.getItem("BB_userName")
-    // console.log('currentUser: ', currentUser);
+    
 
     const { plants, getPlants } = useContext(PlantContext)
     console.log('userPlants: ', plants);
@@ -30,7 +29,7 @@ const styles = {
         color: "#000"
       }
     }
-// {currentUser}'s
+
 return (
     <>
         <section  className="container align-middle">
@@ -43,8 +42,8 @@ return (
                 })
             }
         </div>
-        {plants.length === 0 ? <><h4 style={styles.plantList} className="align-middle">It does not look like you have any plants saved.</h4>
-        <Button variant="primary"><Link style={styles.plantList} className="nav-link" to="/search">Search for plants</Link></Button></>: ""}
+        {plants.length !== 0 ? "" : <><h4 style={styles.plantList} className="align-middle">It does not look like you have any plants saved.</h4>
+        <Button variant="primary"><Link style={styles.plantList} className="nav-link" to="/search">Search for plants</Link></Button></>}
 
         </section>
             

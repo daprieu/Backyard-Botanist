@@ -1,9 +1,55 @@
-import React from "react"
-import { Nav, Navbar, Image } from "react-bootstrap"
+import React, { useState } from "react"
+import { Nav, Navbar, Image, Dropdown, FormControl } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 
 export const NavBar = () => {
+    const currentUser = sessionStorage.getItem("BB_userName")
+    // console.log('currentUser: ', currentUser);
+    const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
+        <a
+          href=""
+          ref={ref}
+          onClick={(e) => {
+            e.preventDefault();
+            onClick(e);
+          }}
+        >
+          {children}
+          {/* &#x25bc; */}
+        </a>
+      ));
+      
+      // forwardRef again here!
+      // Dropdown needs access to the DOM of the Menu to measure it
+      const CustomMenu = React.forwardRef(
+        ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
+          const [value, setValue] = useState("");
+      
+          return (
+            <div
+              ref={ref}
+              style={style}
+              className={className}
+              aria-labelledby={labeledBy}
+            >
+              {/* <FormControl
+                autoFocus
+                className="mx-3 my-2 w-auto"
+                placeholder="Type to filter..."
+                onChange={(e) => setValue(e.target.value)}
+                value={value}
+              /> */}
+              <ul className="list-unstyled">
+                {React.Children.toArray(children).filter(
+                  (child) =>
+                    !value || child.props.children.toLowerCase().startsWith(value),
+                )}
+              </ul>
+            </div>
+          );
+        },
+      );
     return (
         <Navbar expand="lg" bg="dark" variant="dark">
         
@@ -23,7 +69,16 @@ export const NavBar = () => {
             <Link className="nav-link" to="/friends">Friends</Link>
         </Nav>
         <Nav>
-            <Link className="nav-link" to="/logout">Log Out</Link>    
+        <Dropdown>
+        <Navbar.Text>
+        Signed in as: <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
+        {currentUser}
+        </Dropdown.Toggle>
+        </Navbar.Text>
+        <Dropdown.Menu as={CustomMenu}>
+        <Dropdown.Item eventKey="1" active><Link  className="nav-link" to="/logout">Log Out</Link></Dropdown.Item>
+        </Dropdown.Menu>
+        </Dropdown>
         </Nav>
         </Navbar>
     )
