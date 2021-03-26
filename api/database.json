@@ -62,30 +62,6 @@
       "date": "2021-03-22"
     },
     {
-      "id": 11,
-      "userId": 2,
-      "image": "https://bs.plantnet.org/image/o/f01ce76acc1d8a86fc1a661b4234cc5d8aa506e8",
-      "commonName": "velvet tree",
-      "scientificName": "Miconia calvescens",
-      "type": "Tree",
-      "fruit": "Berry",
-      "flower": "N/A",
-      "location": "Nashville",
-      "date": "2021-03-23"
-    },
-    {
-      "id": 12,
-      "userId": 2,
-      "image": "https://bs.plantnet.org/image/o/da8b55376ebd33df2d86e751fc26f73f2c27bbeb",
-      "commonName": "Apple Bush",
-      "scientificName": "Pterocaulon sphacelatum",
-      "type": "bush",
-      "fruit": "N/A",
-      "flower": "white",
-      "location": "Nashville",
-      "date": "2021-03-22"
-    },
-    {
       "userId": 1,
       "image": "https://bs.plantnet.org/image/o/22ff65e59005fb518d529602ae42e9ea2e191b33",
       "commonName": "banana",
@@ -108,30 +84,6 @@
       "location": "zoo",
       "date": "2021-03-23",
       "id": 15
-    },
-    {
-      "userId": 2,
-      "image": "https://bs.plantnet.org/image/o/505fe4b51ed389bd35645fdb9db3dbd17c6d01b7",
-      "commonName": "black cherry",
-      "scientificName": "Prunus serotina",
-      "type": "Tree",
-      "fruit": "small cherries",
-      "flower": "white",
-      "location": "sherlock park",
-      "date": "2021-03-23",
-      "id": 16
-    },
-    {
-      "userId": 2,
-      "image": "https://bs.plantnet.org/image/o/7ebabc6d3634fb5b15b25817842684451d2fffe4",
-      "commonName": "orange daylily",
-      "scientificName": "Hemerocallis fulva",
-      "type": "flowering plant",
-      "fruit": "pod",
-      "flower": "orange",
-      "location": "Nashville",
-      "date": "2021-03-23",
-      "id": 17
     },
     {
       "userId": 3,
@@ -266,30 +218,6 @@
       "id": 28
     },
     {
-      "userId": 2,
-      "image": "https://bs.plantnet.org/image/o/503f6acf4ef449b8aad82a90e12854cc12be8aae",
-      "commonName": "white oak",
-      "scientificName": "Quercus alba",
-      "type": "",
-      "fruit": "",
-      "flower": "",
-      "location": "TN",
-      "date": "",
-      "id": 29
-    },
-    {
-      "userId": 2,
-      "image": "https://bs.plantnet.org/image/o/cd0ae66e4682cec41c5b119bd31134be151e609f",
-      "commonName": "blackjack oak",
-      "scientificName": "Quercus marilandica",
-      "type": "",
-      "fruit": "",
-      "flower": "",
-      "location": "TN",
-      "date": "",
-      "id": 30
-    },
-    {
       "userId": 3,
       "image": "https://d2seqvvyy3b8p2.cloudfront.net/2ef8d67fe0622573622d5830336c9680.jpg",
       "commonName": "water birch",
@@ -351,11 +279,6 @@
     }
   ],
   "friends": [
-    {
-      "id": 1,
-      "currentUserId": 2,
-      "userId": 1
-    },
     {
       "id": 2,
       "currentUserId": 1,
