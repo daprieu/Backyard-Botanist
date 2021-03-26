@@ -276,6 +276,66 @@
       "location": "",
       "date": "",
       "id": 35
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/2292b670683abdaac354389514105df0018d9ef8",
+      "commonName": "English oak",
+      "scientificName": "Quercus robur",
+      "type": "Tree",
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": "",
+      "id": 36
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/2f18db23c18f2c02b79a9c739f4e019609bc88b1",
+      "commonName": "Forest-oak",
+      "scientificName": "Allocasuarina torulosa",
+      "type": null,
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": "",
+      "id": 37
+    },
+    {
+      "id": 38,
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/2292b670683abdaac354389514105df0018d9ef8",
+      "commonName": "English oak",
+      "scientificName": "Quercus robur",
+      "type": "Treea",
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": ""
+    },
+    {
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/f2ef8f23a0c5c7b967b0e0c419329ec391233ebc",
+      "commonName": "Oakleaf geranium",
+      "scientificName": "Pelargonium quercifolium",
+      "type": "Subshrub, Shrub",
+      "fruit": "",
+      "flower": "asdf",
+      "location": "",
+      "date": "",
+      "id": 39
+    },
+    {
+      "id": 40,
+      "userId": 1,
+      "image": "https://bs.plantnet.org/image/o/503f6acf4ef449b8aad82a90e12854cc12be8aae",
+      "commonName": "White oak",
+      "scientificName": "Quercus alba",
+      "type": "Tree",
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": ""
     }
   ],
   "friends": [

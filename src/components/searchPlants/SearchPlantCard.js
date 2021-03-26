@@ -19,7 +19,7 @@ export const SearchPlantCard = ({plant}) => (
     <Card.Body >
     <Card.Text>{ plant.scientific_name }</Card.Text>
     <Card.Text>{ plant.common_name }</Card.Text>
-    <Link to={`/search/addplant/${plant.id}`}><Button variant="primary">
+    <Link to={`/search/addplant/${plant.slug}`}><Button variant="primary">
               Add Plant</Button></Link>
     </Card.Body>
     </Card>

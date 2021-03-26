@@ -37,7 +37,7 @@ export const AppViews = () => {
                 <SearchablePlantList />
             </Route>
 
-            <Route exact path="/search/addplant/:trefleId(\d+)">
+            <Route exact path="/search/addplant/:trefleId">
                 <PlantForm />
             </Route>
 

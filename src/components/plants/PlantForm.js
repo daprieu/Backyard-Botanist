@@ -66,7 +66,7 @@ export const PlantForm = () => {
                     image: treflePlant.image_url,
                     commonName: treflePlant.common_name,
                     scientificName: treflePlant.scientific_name,
-                    type: plant.type,
+                    type: treflePlant.specifications.growth_habit,
                     fruit: plant.fruit,
                     flower: plant.flower,
                     location: plant.location,
@@ -90,14 +90,14 @@ export const PlantForm = () => {
 
     return(
         <section className="d-flex justify-content-center  p-3">
-        <form className="plantForm p-3 mb-6 bg-dark text-white rounded" style={{ width: '45rem'}}>
+        <form className="container-xxl plantForm p-3 mb-5 bg-dark text-white rounded" style={{ width: '45rem'}}>
             <h2 className="plantForm__title">{plantId ? "Edit Plant" : "AddPlant"}</h2>
              {
              plantId ? <img src={plant.image} height={400} alt="new"/> : 
              trefleId ? <img src={treflePlant.image_url} height={400} alt="new"/> : 
               <img src="./goot.jpg" height={400} alt="new"/> 
              }
-             
+             <p className="pl-2"><h3>Native Distributions:</h3>{treflePlant.distribution?.native.join(", ")}</p>
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantName">Plant Name: </label>
@@ -112,9 +112,9 @@ export const PlantForm = () => {
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantName">Plant Scientfic Name: </label>
-        {plantId ? <input type="text" id="scientificName" onChange={handleControlledInputChange} required autoFocus className="form-control"
+        {plantId ? <input type="text" id="scientificName" onChange={handleControlledInputChange} required  className="form-control"
             value={plant.scientificName}/> :
-            <input type="text" id="scientificName" onChange={handleControlledInputChange} required autoFocus className="form-control"
+            <input type="text" id="scientificName" onChange={handleControlledInputChange} required  className="form-control"
             
             value={treflePlant.scientific_name}
             />}
@@ -123,29 +123,33 @@ export const PlantForm = () => {
         </fieldset>
         <fieldset>
         <div className="form-group">
-        <label htmlFor="plantType">Type: </label>
-            <input type="text" id="type" onChange={handleControlledInputChange} required autoFocus className="form-control"
-            value={plant.type}/>
+        <label htmlFor="type">Type: </label>
+            {plantId ? <input type="text" id="type" onChange={handleControlledInputChange} required  className="form-control"
+            value={plant.type}/> : treflePlant.specifications?.growth_habit !== null ? <input type="text" id="type" onChange={handleControlledInputChange} required  className="form-control"
+            value={treflePlant.specifications?.growth_habit}/> : <input type="text" id="type" onChange={handleControlledInputChange} required  className="form-control"
+            value={plant.type}/> }
         </div>
         </fieldset>
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantFruit">Fruit: </label>
-            <input type="text" id="fruit" onChange={handleControlledInputChange} required autoFocus className="form-control"
+            <input type="text" id="fruit" onChange={handleControlledInputChange} required  className="form-control"
             value={plant.fruit}/>
         </div>
         </fieldset>
         <fieldset>
         <div className="form-group">
-        <label htmlFor="plantFlower">flower: </label>
-            <input type="text" id="flower" onChange={handleControlledInputChange} required autoFocus className="form-control"
-            value={plant.flower}/>
+        <label htmlFor="flower">flower: </label>
+            {plantId ? <input type="text" id="flower" onChange={handleControlledInputChange} required  className="form-control"
+            value={plant.flower}/> : treflePlant.flower?.color !== null ? <input type="text" id="flower" onChange={handleControlledInputChange} required  className="form-control"
+            value={treflePlant.flower?.color}/> : <input type="text" id="flower" onChange={handleControlledInputChange} required  className="form-control"
+            value={plant.flower}/> }
         </div>
         </fieldset>
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantLocation">location: </label>
-            <input type="text" id="location" onChange={handleControlledInputChange} required autoFocus className="form-control"
+            <input type="text" id="location" onChange={handleControlledInputChange} required  className="form-control"
             value={plant.location}/>
         </div>
         </fieldset>
@@ -163,6 +167,10 @@ export const PlantForm = () => {
         {plantId ? "Save" : "AddPlant"}
         </button>
     </form>
+    {/* <div className="">
+
+    Native Distributions:{treflePlant.distribution?.native.join(", ")}
+    </div> */}
     </section>
     )
 }
