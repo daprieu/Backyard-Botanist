@@ -1,5 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { FlowerColorProvider } from "./colorSelect/ColorProvider"
 import { FriendFinder } from "./friends/FriendFinder"
 import { FriendList } from "./friends/FriendList"
 import { FriendPlantList } from "./friends/FriendPlantList"
@@ -20,6 +21,7 @@ export const AppViews = () => {
     return (
         <>
         <PlantProvider>
+        <FlowerColorProvider>
         <SearchPlantsProvider>
 
             <Route exact path="/myplants">
@@ -60,6 +62,7 @@ export const AppViews = () => {
         </UserProvider>
         </FriendProvider>
         </SearchPlantsProvider>
+        </FlowerColorProvider>
         </PlantProvider>
         </>
     )
