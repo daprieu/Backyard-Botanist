@@ -32,7 +32,7 @@ const styles = {
 
 return (
     <>
-        <section  className="container align-middle">
+        <section  className="container align-middle pb-5">
         <h3 className="pt-3" style={styles.plantList} >Viewing your plants</h3>
         <div className="d-flex justify-content-center flex-wrap p-2 col-example ">
             
@@ -44,7 +44,6 @@ return (
         </div>
         {plants.length !== 0 ? "" : <><h4 style={styles.plantList} className="align-middle">It does not look like you have any plants saved.</h4>
         <Button variant="primary"><Link style={styles.plantList} className="nav-link" to="/search">Search for plants</Link></Button></>}
-
         </section>
             
         </>

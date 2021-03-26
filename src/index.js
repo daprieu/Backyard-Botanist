@@ -5,9 +5,11 @@ import './index.css';
 import { BackyardBotanist } from './components/BackyardBotanist';
 import reportWebVitals from './reportWebVitals';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      
       <BackyardBotanist />
     </Router>
   </React.StrictMode>,

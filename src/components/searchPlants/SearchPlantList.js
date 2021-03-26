@@ -32,7 +32,10 @@ export const SearchablePlantList = () => {
     }
     
     const plantSearchByName = () => {
-        getSearchablePlants(searchTerms)
+        if (searchTerms === ""){
+            alert("Please enter a search term")
+        } else {
+        getSearchablePlants(searchTerms)}
     }
     useEffect(() => {
         getFlowerColors()
@@ -44,6 +47,7 @@ export const SearchablePlantList = () => {
     //setSearchTerms grabs the data on keyup and updates the searchterms
         return (
         <>
+        <section className="container-xxl pb-5 mb-5">
             <div className="d-flex justify-content-center flex-wrap mt-2 col-example ">
             <h4 className="pr-2 ">Search for a plant by name:</h4>
 
@@ -80,6 +84,7 @@ export const SearchablePlantList = () => {
                 filteredPlants.map(plant => <SearchPlantCard key={plant.id} plant={plant} />)
             }
         </div>
+        </section>
         </>
     )
 }
