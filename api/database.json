@@ -348,6 +348,18 @@
       "location": "place I peed yesterday",
       "date": "2021-03-23",
       "id": 35
+    },
+    {
+      "userId": 7,
+      "image": null,
+      "commonName": "ironweed",
+      "scientificName": "Vernonia galamensis",
+      "type": "",
+      "fruit": "",
+      "flower": "",
+      "location": "",
+      "date": "",
+      "id": 36
     }
   ],
   "friends": [
@@ -405,6 +417,40 @@
       "userId": 2,
       "currentUserId": 7,
       "id": 11
+    }
+  ],
+  "flowerColors": [
+    {
+        "id": 1,
+        "color": "Red"
+    },
+    {
+        "id": 2,
+        "color": "Orange"
+    },
+    {
+        "id": 3,
+        "color": "Yellow"
+    },
+    {
+        "id": 4,
+        "color": "Green"
+    },
+    {
+        "id": 5,
+        "color": "Blue"
+    },
+    {
+        "id": 6,
+        "color": "Purple"
+    },
+    {
+        "id": 7,
+        "color": "Black"
+    },
+    {
+        "id": 8,
+        "color": "White"
     }
   ]
 }
