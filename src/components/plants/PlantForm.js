@@ -13,6 +13,7 @@ export const PlantForm = () => {
         const [plant, setPlant] = useState({
             userId: parseInt(sessionStorage.getItem("app_user_id")),
             image: "",
+            nDist: "",
             commonName: "",
             scientificName: "",
             type: "",
@@ -64,6 +65,7 @@ export const PlantForm = () => {
                 addAPlant({
                     userId: plant.userId,
                     image: treflePlant.image_url,
+                    nDist: treflePlant.distribution?.native.join(", "),
                     commonName: treflePlant.common_name,
                     scientificName: treflePlant.scientific_name,
                     type: treflePlant.specifications.growth_habit,
@@ -97,7 +99,7 @@ export const PlantForm = () => {
              trefleId ? <img src={treflePlant.image_url} height={400} alt="new"/> : 
               <img src="./goot.jpg" height={400} alt="new"/> 
              }
-             {plantId ? "" : <p className="pl-2"><h3>Native Distributions:</h3>{treflePlant.distribution?.native.join(", ")}</p>}
+             <p className="pl-2"><h3>Native Distributions:</h3>{treflePlant.distribution?.native.join(", ")}</p>
         <fieldset>
         <div className="form-group">
         <label htmlFor="plantName">Plant Name: </label>
