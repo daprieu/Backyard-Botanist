@@ -10,6 +10,7 @@ export const NavBar = () => {
         <a
           href=""
           ref={ref}
+          
           onClick={(e) => {
             e.preventDefault();
             onClick(e);
@@ -33,13 +34,6 @@ export const NavBar = () => {
               className={className}
               aria-labelledby={labeledBy}
             >
-              {/* <FormControl
-                autoFocus
-                className="mx-3 my-2 w-auto"
-                placeholder="Type to filter..."
-                onChange={(e) => setValue(e.target.value)}
-                value={value}
-              /> */}
               <ul className="list-unstyled">
                 {React.Children.toArray(children).filter(
                   (child) =>
@@ -76,7 +70,7 @@ export const NavBar = () => {
         </Dropdown.Toggle>
         </Navbar.Text>
         <Dropdown.Menu as={CustomMenu}>
-        <Dropdown.Item eventKey="1" active><Link  className="nav-link" to="/logout">Log Out</Link></Dropdown.Item>
+        <Dropdown.Item eventKey="1"><Link className="" style={{color: "#000"}} to="/logout">Log Out</Link></Dropdown.Item>
         </Dropdown.Menu>
         </Dropdown>
         </Nav>

@@ -8,18 +8,23 @@ import { userStorageKey } from "./auth/authSettings"
 import { NavBar } from "./nav/NavBar"
 import { AppViews } from "./AppViews"
 import { Logout } from "./auth/LogOut"
+import { Footer } from "./footer/Footer"
+
 // import { Navbar } from "react-bootstrap"
 
 
 export const BackyardBotanist = () => (
     <>
+      
     <section className="App">
     <Route render={() => {
       if (sessionStorage.getItem(userStorageKey)) {
         return (
           <>
           <NavBar />
+          
           <AppViews />
+          <Footer />
           </>
         )
       } else {
