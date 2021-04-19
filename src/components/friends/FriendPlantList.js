@@ -30,7 +30,7 @@ return (
     <section  className="d-flex justify-content-center pt-1">
      <h3>You are viewing {friendPlants.name}'s plants</h3> 
     </section>
-     <section  className="d-flex justify-content-center">     
+     <section  className="d-flex justify-content-center mb-5 pb-5">     
      <div className="d-flex flex-column  justify-content-center p-2">
        {  
              fPlantArr?.map(plant => {
