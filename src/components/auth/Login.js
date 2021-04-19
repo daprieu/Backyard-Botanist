@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Link, useHistory } from "react-router-dom";
+import { Image } from "react-bootstrap"
 import { authApi, userStorageKey } from "./authSettings"
 import "./Login.css"
 
@@ -46,7 +47,14 @@ export const Login = () => {
             </dialog>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Welcome to Backyard Botanist!</h1>
+                <h1><Image
+                    src="./BackyardBotanistLogo.png"
+                    width="30"
+                    height="34"
+                    className="d-inline-block align-top mt-2 ml-2"
+                    alt="Backyard Botanist logo"
+                    />{" "}
+                    Welcome to Backyard Botanist!</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
