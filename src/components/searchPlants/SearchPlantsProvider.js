@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react"
-import { trefleAPI } from "./../../Settings"
+import { trefleAPI } from "../../Settings"
 
 export const SearchPlantsContext = createContext()
 
