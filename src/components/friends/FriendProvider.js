@@ -15,18 +15,18 @@ export const FriendProvider = (props) => {
     //of the component, and a function that updates it.
 
     const getFriends = () => {
-        return fetch(`http://localhost:8088/friends/?currentUserId=${(parseInt(sessionStorage.getItem("app_user_id")))}&_expand=user`)
+        return fetch(`https://backyard-botanist-api.herokuapp.com/friends/?currentUserId=${(parseInt(sessionStorage.getItem("app_user_id")))}&_expand=user`)
         .then(res => res.json())
         .then(setFriends)
     }
 
     const getPlantsByFriendId = (id) => {
-        return fetch(`http://localhost:8088/users/${id}?_embed=plants`)
+        return fetch(`https://backyard-botanist-api.herokuapp.com/users/${id}?_embed=plants`)
         .then(res => res.json())
         .then(setFriendPlants)
     }
     const addFriend = friendObj => {
-        return fetch("http://localhost:8088/friends", {
+        return fetch("https://backyard-botanist-api.herokuapp.com/friends", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -36,7 +36,7 @@ export const FriendProvider = (props) => {
         .then(getFriends)
     }
     const deleteFriend = friendId => {
-        return fetch(`http://localhost:8088/friends/${friendId}`, {
+        return fetch(`https://backyard-botanist-api.herokuapp.com/friends/${friendId}`, {
             method: "DELETE"
         })
         .then(getFriends)

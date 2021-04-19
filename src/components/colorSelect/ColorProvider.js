@@ -14,7 +14,7 @@ export const FlowerColorProvider = (props) => {
     //useState() hook to define a variable that holds the state 
     //of the component, and a function that updates it.
 const getFlowerColors = () => {
-    return fetch("http://localhost:8088/flowerColors")
+    return fetch("https://backyard-botanist-api.herokuapp.com/flowerColors")
     .then(res => res.json())
         .then(setColors)
 }
