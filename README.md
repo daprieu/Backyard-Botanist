@@ -1,3 +1,6 @@
+#Project Status
+Currently with the 3rd party api from trefle.io removing their rest api this project is dead in the water. I am currently working on making a new api that will follow a plant identification guide I used back in college while earning my B.S. degree. This project will stay on my github for inspiration and to check back to see how much I have grown as a developer. 
+
 # Backyard Botanist
 
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
